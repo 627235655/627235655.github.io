@@ -7,7 +7,7 @@
     
 
     <title>
-      Hexo-博客搭建日记 | n顾盼神飞 
+      Hexo-博客搭建记 | n顾盼神飞 
     </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -16,18 +16,15 @@
     
     
 
-    <meta name="description" content="一、环境准备需要node git github账号，于各自网站安装即可。 二、安装Hexostep1:全局安装hexo1$ sudo npm install hexo-cli -g step2:进入指定目录初始化hexo项目1234567891011121314# 创建hexo文件夹$ mkdir hexo# 进入hexo文件夹$ cd hexo# 初始化hexo$ hexo init# 安装依赖">
-<meta name="keywords" content="hexo">
+    <meta name="keywords" content="hexo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo-博客搭建日记 | n顾盼神飞">
+<meta property="og:title" content="Hexo-博客搭建记 | n顾盼神飞">
 <meta property="og:url" content="http://yoursite.com/2018/05/29/init_blog/index.html">
 <meta property="og:site_name" content="n顾盼神飞">
-<meta property="og:description" content="一、环境准备需要node git github账号，于各自网站安装即可。 二、安装Hexostep1:全局安装hexo1$ sudo npm install hexo-cli -g step2:进入指定目录初始化hexo项目1234567891011121314# 创建hexo文件夹$ mkdir hexo# 进入hexo文件夹$ cd hexo# 初始化hexo$ hexo init# 安装依赖">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-29T06:58:14.313Z">
+<meta property="og:updated_time" content="2018-05-29T07:40:02.941Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo-博客搭建日记 | n顾盼神飞">
-<meta name="twitter:description" content="一、环境准备需要node git github账号，于各自网站安装即可。 二、安装Hexostep1:全局安装hexo1$ sudo npm install hexo-cli -g step2:进入指定目录初始化hexo项目1234567891011121314# 创建hexo文件夹$ mkdir hexo# 进入hexo文件夹$ cd hexo# 初始化hexo$ hexo init# 安装依赖">
+<meta name="twitter:title" content="Hexo-博客搭建记 | n顾盼神飞">
     
     
     
@@ -159,7 +156,7 @@ classes that you can use:
 
   <header class="post-header">
     
-    <h1 class="post-title">Hexo-博客搭建日记</h1>
+    <h1 class="post-title">Hexo-博客搭建记</h1>
 
     
 
@@ -193,13 +190,16 @@ classes that you can use:
 
   <section id="post-content" class="article-content post">
     <h4 id="一、环境准备"><a href="#一、环境准备" class="headerlink" title="一、环境准备"></a>一、环境准备</h4><p>需要node git github账号，于各自网站安装即可。</p>
-<h4 id="二、安装Hexo"><a href="#二、安装Hexo" class="headerlink" title="二、安装Hexo"></a>二、安装Hexo</h4><p>step1:全局安装hexo<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install hexo-cli -g</span><br></pre></td></tr></table></figure></p>
+<h4 id="二、安装Hexo"><a href="#二、安装Hexo" class="headerlink" title="二、安装Hexo"></a>二、安装Hexo</h4><p>step1:全局安装hexo<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm i hexo-cli -g</span><br></pre></td></tr></table></figure></p>
 <p>step2:进入指定目录初始化hexo项目<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建hexo文件夹</span></span><br><span class="line">$ mkdir hexo</span><br><span class="line"><span class="comment"># 进入hexo文件夹</span></span><br><span class="line">$ <span class="built_in">cd</span> hexo</span><br><span class="line"><span class="comment"># 初始化hexo</span></span><br><span class="line">$ hexo init</span><br><span class="line"><span class="comment"># 安装依赖包</span></span><br><span class="line">$ npm install</span><br><span class="line"><span class="comment"># 部署到本地(调试使用) 简写 hexo s</span></span><br><span class="line">$ hexo server</span><br><span class="line"><span class="comment"># 先运行上面的命令，再在浏览器输入localhost:4000即可</span></span><br><span class="line"><span class="comment"># 问题：执行hexo server提示找不到该指令</span></span><br><span class="line"><span class="comment"># 解决办法：在Hexo 3.0 后server被单独出来了，需要安装server，安装的命令如下：</span></span><br><span class="line">$ npm install hexo -server --save</span><br></pre></td></tr></table></figure></p>
-<p>step3:将本地hexo项目与github远程仓库关联<br>进入github新建Repositorie<br>注意Repositorie的名字一定要满足your Account Name/your Account Name.github.io<br>以上配置完成后保存 然后回到终端执行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#安装一个插件，这样才能将你写好的文章部署到github服务器上并让别人浏览到。</span></span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line"><span class="comment">#安装完成后在终端中依次执行如下代码(为了简单后续统称为三步)</span></span><br><span class="line"><span class="comment">#清理缓存</span></span><br><span class="line">hexo clean </span><br><span class="line"><span class="comment">#进行渲染 简写 hexo g</span></span><br><span class="line">hexo generate </span><br><span class="line"><span class="comment">#调试完毕后使用 简写为 hexo d来部署到git服务器</span></span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></p>
+<p>step3:将本地hexo项目与github远程仓库关联</p>
+<p>进入github新建Repositorie<br>注意Repositorie的名字一定要满足your Account Name/your Account Name.github.io<br>以上配置完成后保存 然后回到终端执行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#安装一个插件，这样才能将你写好的文章部署到github服务器上并让别人浏览到。</span></span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line"><span class="comment">#安装完成后在终端中依次执行如下代码(为了简单后续统称为三步)</span></span><br><span class="line"><span class="comment">#清理缓存</span></span><br><span class="line">hexo clean </span><br><span class="line"><span class="comment">#进行渲染 简写 hexo g</span></span><br><span class="line">hexo generate </span><br><span class="line"><span class="comment">#调试完毕后使用 简写为 hexo d来部署到git服务器</span></span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></p>
 <p>之后每次更新代码或者文档都需要重新部署  将这里的三步重新执行一次<br>其实我们可以在hexo项目的根目录下  新建一个node命令来整合这三步<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">"scripts": &#123;</span><br><span class="line">   "build": "hexo clean &amp;&amp; hexo g &amp;&amp; hexo d"</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>之后在终端执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run build</span><br></pre></td></tr></table></figure></p>
 <p>即可</p>
 <p>执行完以上操作后<br>打开浏览器地址了输入http://你github名字.github.io就可以看到效果~</p>
+<h4 id="三、更换主题"><a href="#三、更换主题" class="headerlink" title="三、更换主题"></a>三、更换主题</h4><p>……</p>
+<h4 id="四、自定义主题"><a href="#四、自定义主题" class="headerlink" title="四、自定义主题"></a>四、自定义主题</h4><p>……</p>
 
   </section>
 

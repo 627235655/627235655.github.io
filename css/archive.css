@@ -1,4 +1,4 @@
-.archive-meta h3 {
+/* .archive-meta h3 {
     line-height: 2.0;
 }
 
@@ -21,4 +21,20 @@
 
 .archive-meta .archive-list-count::after {
     content: ")";
+} */
+
+.post-list li{
+    position: relative;
+}
+.post-list__meta{
+    display: inline-block;
+    margin: 0;
+    padding: 2px;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    background: #fff;
+}
+
+.main-post-list{
+    color:  #777;
 }
