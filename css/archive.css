@@ -37,6 +37,7 @@
 }
 .post-list {
     display: flex;
+    align-items: flex-start;
     margin: 0;
     padding: 20px 0;
     list-style-type: none;
