@@ -7,6 +7,7 @@
 */
 
 @import url(../css/animate.css);
+@import url(../css/article.css);
 html,
 body,
 div,
@@ -97,6 +98,7 @@ video {
 }
 
 
+
 /* HTML5 display-role reset for older browsers */
 
 article,
@@ -155,6 +157,7 @@ body:after {
 body:after {
     clear: both;
 }
+
 
 
 /*
@@ -1329,7 +1332,10 @@ body {
     /*font-family: "Raleway", sans-serif;*/
     font-family: "Raleway", Verdana, sans-serif, 宋体, serif, "Droid Serif", Helvetica Neue, Helvetica, Arial;
     font-size: 1em;
-    color: #666666;
+    color: #444;
+    line-height: 1.5;
+    background: url(../images/body_bg_2.jpg) center fixed;
+    background-size: cover;
 }
 
 ::selection {
@@ -1342,7 +1348,7 @@ body {
 
 a {
     text-decoration: none;
-    color: #006699;
+    color: #444;
 }
 
 a:hover {
@@ -1363,8 +1369,8 @@ h5 {
     margin-bottom: .4em;
     /*font-family: "Roboto Slab", serif;*/
     font-family: "Raleway", Verdana, sans-serif, 宋体, serif, "Droid Serif", Helvetica Neue, Helvetica, Arial;
-    font-weight: lighter;
-    color: #333333;
+    /* lighterfont-weight: lighter; */
+    color: #444;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -1469,7 +1475,7 @@ code {
 .author,
 .tags {
     font-size: .8em;
-    color: #c7c7c7;
+    color: #777;
 }
 
 .date a,
@@ -1538,16 +1544,17 @@ code {
 }
 
 .content-wrapper__inner {
-    margin: 0 10%;
-    padding: 50px 0;
+    margin: 0 5%;
+    padding: 25px 0;
 }
 
 .footer {
     display: block;
     padding: 2em 0 0 0;
-    border-top: 2px solid #dddddd;
+    border-top: 1px solid #eee;
     font-size: .7em;
-    color: #b3b3b3;
+    color: #777;
+    text-align: center;
 }
 
 .footer__copyright {
@@ -1592,7 +1599,7 @@ hr {
 
 .post-meta {
     margin: 0 0 1.4em 0;
-    color: #c7c7c7;
+    color: #777;
 }
 
 .post-meta__date {
@@ -1601,6 +1608,16 @@ hr {
 
 .post-meta__tags {
     margin-left: .4em;
+}
+.post-meta__tags font{
+    margin-right: 5px;
+    padding: 3px 6px;
+    border:  1px solid #777;
+    border-radius: 3px;
+}
+.post-meta__tags font:hover{
+    border:  1px solid #444;
+    color: #444;
 }
 
 .post-meta__author {
@@ -1785,9 +1802,9 @@ hr {
 
 .btn,
 .navigation__item a {
-    padding: 10px 20px;
+    padding: 8px 16px;
     border: 1px solid #006699;
-    border-radius: 20px;
+    border-radius: 16px;
     font-size: .9em;
     font-weight: bold;
     letter-spacing: 1px;
@@ -1938,14 +1955,41 @@ i {
 }
 
 .post-list {
+    display: flex;
     margin: 0;
-    padding: 0;
+    padding: 20px 0;
     list-style-type: none;
     text-align: left;
 }
 
 .post-list li {
-    margin: 0 0 2.2em 0;
+    margin: 15px;
+    padding: 40px;
+    background: #fff;
+    border-radius: 2px;
+    transform: translateY(0);
+    transition: all .5s;
+    position: relative;
+    background: linear-gradient(-150deg, transparent 1.5em, #f5f5f5 0);
+}
+
+.post-list li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(to left bottom, transparent 50%, rgba(0, 0, 0, .2) 0, rgba(0, 0, 0, .4)) 100% 0 no-repeat;
+    width: 1.73em;
+    height: 3em;
+    transform: translateY(-1.3em) rotate(-30deg);
+    transform-origin: bottom right;
+    border-bottom-left-radius: inherit;
+    box-shadow: -.2em .2em .3em -.1em rgba(0, 0, 0, .15);
+}
+
+.post-list li:hover {
+    transform: translateY(-2px);
+    transition: all .5s;
 }
 
 .post-list li:last-child hr {
@@ -1955,14 +1999,14 @@ i {
 .post-list__post-title {
     margin-top: 0;
     margin-bottom: .2em;
-    font-size: 1.8em;
+    font-size: 1.5em;
     -webkit-font-smoothing: antialiased;
-    font-weight: bold;
+    /* font-weight: bold; */
     line-height: 1.3em;
 }
 
 .post-list__post-title a {
-    color: #333333;
+    color: #555;
 }
 
 .post-list__post-title a:hover {
@@ -1973,12 +2017,12 @@ i {
     display: block;
     margin: .7em 0 0 0;
     font-size: .9em;
-    color: #c7c7c7;
+    color: #999;
 }
 
 .post-list__meta--date {
     margin-right: .5em;
-    color: #c7c7c7;
+    color: #999;
 }
 
 .post-list__meta--tags {
@@ -2260,6 +2304,7 @@ input[type="tel"]:-ms-input-placeholder {
         margin-bottom: .4em;
     }
 }
+
 
 
 /* add */
