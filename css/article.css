@@ -38,6 +38,7 @@
 }
 
 .article-content {
+    padding-top: 15px;
     border-top: 1px solid #ddd;
     color: #777;
 }
