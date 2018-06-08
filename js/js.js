@@ -14,6 +14,10 @@
 //**********************************
 //**********************************
 $(document).ready(function() {
+
+    
+
+
     Array.prototype.forEach.call(document.querySelectorAll('.mdl-card__media'), function(el) {
         var link = el.querySelector('a');
         if (!link) {

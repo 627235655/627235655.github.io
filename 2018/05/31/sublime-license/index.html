@@ -1,5 +1,28 @@
 <!DOCTYPE html>
 <html style="display: none;" lang="zh">
+    <style type="text/css">
+        /* reset */
+        .text-popup {
+            position: absolute!important;
+            z-index: 99;
+            color: red;
+            user-select: none;
+            white-space: nowrap;
+            transform: scale(1.5);
+            animation: textPopup ease 1s;
+        }
+        @keyframes textPopup {
+            0%, 100% {
+                opacity: 0;
+            }
+            25% {
+                opacity: 1;
+            }
+            100% {
+                transform: scale(2) translateY(-50px);    
+            }
+        }
+    </style>
     <head>
     <meta charset="utf-8">
     <!--
@@ -55,7 +78,8 @@
     <link rel="icon" href="/img/favicon.png">
 
     <meta name="format-detection" content="telephone=no"/>
-    <meta name="description" itemprop="description" content="wodexiaowu">
+    <meta name="description" itemprop="description" content="ublime text3 3161 注册码
+">
     <meta name="keywords" content=",sublime">
     <meta name="theme-color" content="#0097A7">
 
@@ -102,7 +126,7 @@
   }
 
   a {
-    color: #00838F;
+    color: #6FC1EA;
   }
 
   .mdl-card__media,
@@ -153,7 +177,7 @@
   }
 
   .post-toc a:hover {
-    color: #00838F;
+    color: #6FC1EA;
     text-decoration: underline;
   }
 
@@ -231,12 +255,13 @@
     <meta property="og:type" content="blog">
     <meta property="og:title" content="sublime-注册码 | n顾盼神飞">
     <meta property="og:image" content="/img/favicon.png">
-    <meta property="og:description" content="wodexiaowu">
+    <meta property="og:description" content="ublime text3 3161 注册码
+">
     <meta property="og:article:tag" content="sublime"> 
 
     
         <meta property="article:published_time" content="Thu May 31 2018 11:15:21 GMT+0800">
-        <meta property="article:modified_time" content="Fri Jun 08 2018 14:42:20 GMT+0800">
+        <meta property="article:modified_time" content="Fri Jun 08 2018 18:04:09 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -259,7 +284,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/05/31/sublime-license/index.html",
     "headline": "sublime-注册码",
     "datePublished": "Thu May 31 2018 11:15:21 GMT+0800",
-    "dateModified": "Fri Jun 08 2018 14:42:20 GMT+0800",
+    "dateModified": "Fri Jun 08 2018 18:04:09 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "zongyuan.ning",
@@ -278,7 +303,8 @@
         }
     },
     "keywords": ",sublime",
-    "description": "wodexiaowu",
+    "description": "ublime text3 3161 注册码
+",
 }
 </script>
 
@@ -470,7 +496,9 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>—– BEGIN LICENSE —–<br>Country Rebel<br>Single User License<br>EA7E-993095<br>19176BCE 3FF86EA0 3CE86508 6BE4DCA7<br>9F74D761 4D0CAD8B E4033008 43FC73F3<br>1C01F6DD C4829BE9 E7830578 A4823ADC<br>61B224F1 DC93C458 ABAAAE0F 925C32D4<br>04A83C36 813FF6C8 9877942C 4418F99C<br>2F15E5B8 544EDB80 D9A86985 4CBBA6A8<br>998DE3E4 7FB33E15 6CD30357 6DC96CEA<br>ECB1BC4E D8010D5A 77BA86C8 BA7F76CC<br>—— END LICENSE ——</p>
+        <pre><code>sublime text3 3161 注册码
+</code></pre><a id="more"></a>
+<p>—– BEGIN LICENSE —–<br>Country Rebel<br>Single User License<br>EA7E-993095<br>19176BCE 3FF86EA0 3CE86508 6BE4DCA7<br>9F74D761 4D0CAD8B E4033008 43FC73F3<br>1C01F6DD C4829BE9 E7830578 A4823ADC<br>61B224F1 DC93C458 ABAAAE0F 925C32D4<br>04A83C36 813FF6C8 9877942C 4418F99C<br>2F15E5B8 544EDB80 D9A86985 4CBBA6A8<br>998DE3E4 7FB33E15 6CD30357 6DC96CEA<br>ECB1BC4E D8010D5A 77BA86C8 BA7F76CC<br>—— END LICENSE ——</p>
 
         
     
@@ -926,6 +954,46 @@ console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viose
 
                 </main>
             </div>
+            <script type="text/javascript">
+                // util
+                function getRandomNum(max) {
+                  return Math.floor(Math.random() * max);
+                }
+
+                let fnTextPopup = function(arr, options) {
+                    // arr参数是必须的
+                    if (!arr || !arr.length) {
+                        return;
+                    }
+                    // 主逻辑
+                    let len = arr.length;
+                    document.documentElement.addEventListener('click', function(event) {
+                        let x = event.pageX,
+                            y = event.pageY;
+                            console.log(x,y)
+
+                        let eleText = document.createElement('i');
+                        eleText.className = 'text-popup material-icons sidebar-material-icons';
+                        eleText.innerHTML = 'favorite'
+                        this.appendChild(eleText);
+                            console.log(eleText.clientWidth,eleText.clientHeight)
+                        // 生成颜色
+                        let colorTxt = '#';
+                        for (let i = 0; i < 6; i++) {
+                          colorTxt += arr[getRandomNum(len)];
+                        }
+                        eleText.style.color = colorTxt;
+                        // 位置
+                        eleText.style.left = (x - eleText.clientWidth / 2) + 'px';
+                        eleText.style.top = (y - eleText.clientHeight) + 'px';
+                        // 动画结束后删除自己
+                        eleText.addEventListener('animationend', function() {
+                            eleText.parentNode.removeChild(eleText);
+                        });
+                    });
+                };
+                fnTextPopup([0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F']);
+            </script>
         </body>
     
 </html>

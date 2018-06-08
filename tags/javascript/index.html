@@ -1,5 +1,28 @@
 <!DOCTYPE html>
 <html style="display: none;" lang="zh">
+    <style type="text/css">
+        /* reset */
+        .text-popup {
+            position: absolute!important;
+            z-index: 99;
+            color: red;
+            user-select: none;
+            white-space: nowrap;
+            transform: scale(1.5);
+            animation: textPopup ease 1s;
+        }
+        @keyframes textPopup {
+            0%, 100% {
+                opacity: 0;
+            }
+            25% {
+                opacity: 1;
+            }
+            100% {
+                transform: scale(2) translateY(-50px);    
+            }
+        }
+    </style>
     <head>
     <meta charset="utf-8">
     <!--
@@ -102,7 +125,7 @@
   }
 
   a {
-    color: #00838F;
+    color: #6FC1EA;
   }
 
   .mdl-card__media,
@@ -153,7 +176,7 @@
   }
 
   .post-toc a:hover {
-    color: #00838F;
+    color: #6FC1EA;
     text-decoration: underline;
   }
 
@@ -298,8 +321,8 @@
     <!-- Post Thumbnail -->
     
         
-            <!-- Pure Thumbnail -->
-            <div class="post-thumbnail-pure mdl-card__media mdl-color-text--grey-50" style="background-color:#6FC1EA !important">
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
         
     
 
@@ -310,7 +333,8 @@
     <!-- Post Excerpt -->
     <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
         
-            
+            Pixi.js是一款超快的开源HTML5 2D渲染引擎，使用带有Canvas回调功能的WebGL
+
         
         &nbsp;&nbsp;&nbsp;
         <span>
@@ -361,7 +385,7 @@
 
     var locatePost = $('.locate-thumbnail-symbol').next();
     for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() *  + 1);
+        randomNum = Math.floor(Math.random() * 19 + 1);
 
         locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
         locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
@@ -773,6 +797,46 @@ console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viose
 
                 </main>
             </div>
+            <script type="text/javascript">
+                // util
+                function getRandomNum(max) {
+                  return Math.floor(Math.random() * max);
+                }
+
+                let fnTextPopup = function(arr, options) {
+                    // arr参数是必须的
+                    if (!arr || !arr.length) {
+                        return;
+                    }
+                    // 主逻辑
+                    let len = arr.length;
+                    document.documentElement.addEventListener('click', function(event) {
+                        let x = event.pageX,
+                            y = event.pageY;
+                            console.log(x,y)
+
+                        let eleText = document.createElement('i');
+                        eleText.className = 'text-popup material-icons sidebar-material-icons';
+                        eleText.innerHTML = 'favorite'
+                        this.appendChild(eleText);
+                            console.log(eleText.clientWidth,eleText.clientHeight)
+                        // 生成颜色
+                        let colorTxt = '#';
+                        for (let i = 0; i < 6; i++) {
+                          colorTxt += arr[getRandomNum(len)];
+                        }
+                        eleText.style.color = colorTxt;
+                        // 位置
+                        eleText.style.left = (x - eleText.clientWidth / 2) + 'px';
+                        eleText.style.top = (y - eleText.clientHeight) + 'px';
+                        // 动画结束后删除自己
+                        eleText.addEventListener('animationend', function() {
+                            eleText.parentNode.removeChild(eleText);
+                        });
+                    });
+                };
+                fnTextPopup([0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F']);
+            </script>
         </body>
     
 </html>

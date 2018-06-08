@@ -1,5 +1,28 @@
 <!DOCTYPE html>
 <html style="display: none;" lang="zh">
+    <style type="text/css">
+        /* reset */
+        .text-popup {
+            position: absolute!important;
+            z-index: 99;
+            color: red;
+            user-select: none;
+            white-space: nowrap;
+            transform: scale(1.5);
+            animation: textPopup ease 1s;
+        }
+        @keyframes textPopup {
+            0%, 100% {
+                opacity: 0;
+            }
+            25% {
+                opacity: 1;
+            }
+            100% {
+                transform: scale(2) translateY(-50px);    
+            }
+        }
+    </style>
     <head>
     <meta charset="utf-8">
     <!--
@@ -102,7 +125,7 @@
   }
 
   a {
-    color: #00838F;
+    color: #6FC1EA;
   }
 
   .mdl-card__media,
@@ -153,7 +176,7 @@
   }
 
   .post-toc a:hover {
-    color: #00838F;
+    color: #6FC1EA;
     text-decoration: underline;
   }
 

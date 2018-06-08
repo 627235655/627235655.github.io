@@ -1,5 +1,28 @@
 <!DOCTYPE html>
 <html style="display: none;" lang="zh">
+    <style type="text/css">
+        /* reset */
+        .text-popup {
+            position: absolute!important;
+            z-index: 99;
+            color: red;
+            user-select: none;
+            white-space: nowrap;
+            transform: scale(1.5);
+            animation: textPopup ease 1s;
+        }
+        @keyframes textPopup {
+            0%, 100% {
+                opacity: 0;
+            }
+            25% {
+                opacity: 1;
+            }
+            100% {
+                transform: scale(2) translateY(-50px);    
+            }
+        }
+    </style>
     <head>
     <meta charset="utf-8">
     <!--
@@ -55,7 +78,8 @@
     <link rel="icon" href="/img/favicon.png">
 
     <meta name="format-detection" content="telephone=no"/>
-    <meta name="description" itemprop="description" content="搭建博客，构思已久。却停滞于行动，此次趁着受人之托，得以窥见其中一二。">
+    <meta name="description" itemprop="description" content="搭建博客，构思已久。却停滞于行动，此次趁着受人之托，得以窥见其中一二
+">
     <meta name="keywords" content=",hexo">
     <meta name="theme-color" content="#0097A7">
 
@@ -102,7 +126,7 @@
   }
 
   a {
-    color: #00838F;
+    color: #6FC1EA;
   }
 
   .mdl-card__media,
@@ -153,7 +177,7 @@
   }
 
   .post-toc a:hover {
-    color: #00838F;
+    color: #6FC1EA;
     text-decoration: underline;
   }
 
@@ -231,12 +255,13 @@
     <meta property="og:type" content="blog">
     <meta property="og:title" content="Hexo-博客搭建记 | n顾盼神飞">
     <meta property="og:image" content="/img/favicon.png">
-    <meta property="og:description" content="搭建博客，构思已久。却停滞于行动，此次趁着受人之托，得以窥见其中一二。">
+    <meta property="og:description" content="搭建博客，构思已久。却停滞于行动，此次趁着受人之托，得以窥见其中一二
+">
     <meta property="og:article:tag" content="hexo"> 
 
     
         <meta property="article:published_time" content="Tue May 29 2018 11:44:27 GMT+0800">
-        <meta property="article:modified_time" content="Thu Jun 07 2018 16:22:11 GMT+0800">
+        <meta property="article:modified_time" content="Fri Jun 08 2018 18:02:23 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -259,7 +284,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/05/29/init-blog/index.html",
     "headline": "Hexo-博客搭建记",
     "datePublished": "Tue May 29 2018 11:44:27 GMT+0800",
-    "dateModified": "Thu Jun 07 2018 16:22:11 GMT+0800",
+    "dateModified": "Fri Jun 08 2018 18:02:23 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "zongyuan.ning",
@@ -278,7 +303,8 @@
         }
     },
     "keywords": ",hexo",
-    "description": "搭建博客，构思已久。却停滞于行动，此次趁着受人之托，得以窥见其中一二。",
+    "description": "搭建博客，构思已久。却停滞于行动，此次趁着受人之托，得以窥见其中一二
+",
 }
 </script>
 
@@ -363,8 +389,15 @@
     <!-- Paradox Post Header -->
     
         
-            <!-- Pure Thumbnail -->
-            <div class="post_thumbnail-pure mdl-card__media mdl-color-text--grey-50" style="background-color:#6FC1EA !important">
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
         
     
             <p class="article-headline-p">
@@ -481,7 +514,9 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>本文参考来源于–<a href="https://juejin.im/entry/5a9144896fb9a063523e0e97" target="_blank" rel="noopener">【hexo搭建博客最全攻略】</a>–<a href="https://juejin.im/entry/574e291e71cfe4006bfe59f6" target="_blank" rel="noopener">【手把手教 GitHub + Hexo 搭建博客】</a></p>
+        <pre><code>搭建博客，构思已久。却停滞于行动，此次趁着受人之托，得以窥见其中一二
+</code></pre><a id="more"></a>
+<p>本文参考来源于–<a href="https://juejin.im/entry/5a9144896fb9a063523e0e97" target="_blank" rel="noopener">【hexo搭建博客最全攻略】</a>–<a href="https://juejin.im/entry/574e291e71cfe4006bfe59f6" target="_blank" rel="noopener">【手把手教 GitHub + Hexo 搭建博客】</a></p>
 <h4 id="一、环境准备"><a href="#一、环境准备" class="headerlink" title="一、环境准备"></a>一、环境准备</h4><p>需要node git github账号，于各自网站安装即可。</p>
 <h4 id="二、安装Hexo"><a href="#二、安装Hexo" class="headerlink" title="二、安装Hexo"></a>二、安装Hexo</h4><p>step1:全局安装hexo<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm i hexo-cli -g</span><br></pre></td></tr></table></figure></p>
 <p>step2:进入指定目录初始化hexo项目<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建hexo文件夹</span></span><br><span class="line">$ mkdir hexo</span><br><span class="line"><span class="comment"># 进入hexo文件夹</span></span><br><span class="line">$ <span class="built_in">cd</span> hexo</span><br><span class="line"><span class="comment"># 初始化hexo</span></span><br><span class="line">$ hexo init</span><br><span class="line"><span class="comment"># 安装依赖包</span></span><br><span class="line">$ npm install</span><br><span class="line"><span class="comment"># 部署到本地(调试使用) 简写 hexo s</span></span><br><span class="line">$ hexo server</span><br><span class="line"><span class="comment"># 先运行上面的命令，再在浏览器输入localhost:4000即可</span></span><br><span class="line"><span class="comment"># 问题：执行hexo server提示找不到该指令</span></span><br><span class="line"><span class="comment"># 解决办法：在Hexo 3.0 后server被单独出来了，需要安装server，安装的命令如下：</span></span><br><span class="line">$ npm install hexo -server --save</span><br></pre></td></tr></table></figure></p>
@@ -941,6 +976,46 @@ console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viose
 
                 </main>
             </div>
+            <script type="text/javascript">
+                // util
+                function getRandomNum(max) {
+                  return Math.floor(Math.random() * max);
+                }
+
+                let fnTextPopup = function(arr, options) {
+                    // arr参数是必须的
+                    if (!arr || !arr.length) {
+                        return;
+                    }
+                    // 主逻辑
+                    let len = arr.length;
+                    document.documentElement.addEventListener('click', function(event) {
+                        let x = event.pageX,
+                            y = event.pageY;
+                            console.log(x,y)
+
+                        let eleText = document.createElement('i');
+                        eleText.className = 'text-popup material-icons sidebar-material-icons';
+                        eleText.innerHTML = 'favorite'
+                        this.appendChild(eleText);
+                            console.log(eleText.clientWidth,eleText.clientHeight)
+                        // 生成颜色
+                        let colorTxt = '#';
+                        for (let i = 0; i < 6; i++) {
+                          colorTxt += arr[getRandomNum(len)];
+                        }
+                        eleText.style.color = colorTxt;
+                        // 位置
+                        eleText.style.left = (x - eleText.clientWidth / 2) + 'px';
+                        eleText.style.top = (y - eleText.clientHeight) + 'px';
+                        // 动画结束后删除自己
+                        eleText.addEventListener('animationend', function() {
+                            eleText.parentNode.removeChild(eleText);
+                        });
+                    });
+                };
+                fnTextPopup([0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F']);
+            </script>
         </body>
     
 </html>
