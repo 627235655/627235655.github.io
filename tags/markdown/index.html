@@ -813,13 +813,11 @@ console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viose
                     document.documentElement.addEventListener('click', function(event) {
                         let x = event.pageX,
                             y = event.pageY;
-                            console.log(x,y)
 
                         let eleText = document.createElement('i');
                         eleText.className = 'text-popup material-icons sidebar-material-icons';
                         eleText.innerHTML = 'favorite'
                         this.appendChild(eleText);
-                            console.log(eleText.clientWidth,eleText.clientHeight)
                         // 生成颜色
                         let colorTxt = '#';
                         for (let i = 0; i < 6; i++) {
