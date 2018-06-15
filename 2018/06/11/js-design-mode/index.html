@@ -382,7 +382,7 @@ zh"
     
     <title>
         
-            分类: 技术 | 
+            js-设计模式 | 
         
         n顾盼神飞
     </title>
@@ -392,8 +392,9 @@ zh"
     <link rel="icon" href="/img/favicon.png">
 
     <meta name="format-detection" content="telephone=no"/>
-    <meta name="description" itemprop="description" content="wodexiaowu">
-    <meta name="keywords" content="技术 生活">
+    <meta name="description" itemprop="description" content="
+36个设计模式">
+    <meta name="keywords" content="技术 生活,javascript">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -420,6 +421,9 @@ zh"
         <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/atelier-lakeside-light.min.css?vHkP60BXIENHxF6lUdDXhA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
             
         
 
@@ -551,7 +555,7 @@ zh"
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="n顾盼神飞">
-    <meta name="msapplication-starturl" content="https://627235655.github.io/categories/技术/">
+    <meta name="msapplication-starturl" content="https://627235655.github.io/2018/06/11/js-design-mode/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="n顾盼神飞">
@@ -566,13 +570,17 @@ zh"
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://627235655.github.io/categories/技术/">
+    <meta property="og:url" content="https://627235655.github.io/2018/06/11/js-design-mode/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="分类: 技术 | n顾盼神飞">
+    <meta property="og:title" content="js-设计模式 | n顾盼神飞">
     <meta property="og:image" content="/img/favicon.png">
-    <meta property="og:description" content="wodexiaowu">
-    
+    <meta property="og:description" content="
+36个设计模式">
+    <meta property="og:article:tag" content="javascript"> 
 
+    
+        <meta property="article:published_time" content="Mon Jun 11 2018 16:20:50 GMT+0800">
+        <meta property="article:modified_time" content="Wed Jun 13 2018 16:02:43 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -580,13 +588,44 @@ zh"
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://627235655.github.io/categories/技术/index.html" />
+        <link rel="canonical" href="https://627235655.github.io/2018/06/11/js-design-mode/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://627235655.github.io/2018/06/11/js-design-mode/index.html",
+    "headline": "js-设计模式",
+    "datePublished": "Mon Jun 11 2018 16:20:50 GMT+0800",
+    "dateModified": "Wed Jun 13 2018 16:02:43 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "zongyuan.ning",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/head.png"
+        },
+        "description": "享受生命中每一个脚步~"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "n顾盼神飞",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",javascript技术 生活",
+    "description": "
+36个设计模式",
+}
+</script>
 
 
     
@@ -620,493 +659,267 @@ zh"
                                 <span id="MD-burger-id" class="MD-burger-layer"></span>
                             </button>
                         
-                        <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                        <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
-        
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#面向对象编程"><span class="post-toc-number">1.</span> <span class="post-toc-text">面向对象编程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#类的实现-es5"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">类的实现(es5)</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#简单工厂模式"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">简单工厂模式</span></a></li></ol></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--10dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Pure Thumbnail -->
-            <div class="post-thumbnail-pure mdl-card__media mdl-color-text--grey-50" style="background-color:#6FC1EA !important">
+            <div class="post_thumbnail-pure mdl-card__media mdl-color-text--grey-50" style="background-color:#6FC1EA !important">
         
     
+            <p class="article-headline-p">
+                js-设计模式
+            </p>
+        </div>
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/06/14/color-btns/">基于颜色的按钮UI组件生成</a></p>
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/head.png" width="44px" height="44px" alt="Author Avatar"/>
     </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-按钮作为网页设计中的一名常客，游走于pc和移动端，基于状态和基于颜色会有什么不同呢？
-        
-        &nbsp;&nbsp;&nbsp;
+    <!-- Author Name & Date -->
+    <div>
+        <strong>
+            zongyuan.ning
+        </strong>
         <span>
-            <a href="/2018/06/14/color-btns/" target="_self">阅读全文</a>
+            6月 11, 2018
+            <span class="m-l-md">【字数：121】</span>
+            <span  class="m-l-md">【阅读时长：1min】</span>
         </span>
     </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/head.png" width="44px" height="44px" alt="zongyuan.ning's avatar">
-            </div>
-            <div>
-                <strong>zongyuan.ning</strong>
-                <span>6月 14, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            
-          
-              <!-- Category -->
-              <span class="post_entry-category post_tag-link">
-                  <a class="post_category-link" href="/categories/技术/">技术</a>
-              </span>
-            
-            |
-            
-                <a class="post_tag-link" href="/tags/css/">css</a>
-            
-            
+    <div class="section-spacer"></div>
 
-            
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
+    <!-- Qrcode -->
     
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--10dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        
-            <!-- Pure Thumbnail -->
-            <div class="post-thumbnail-pure mdl-card__media mdl-color-text--grey-50" style="background-color:#6FC1EA !important">
-        
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC3klEQVR42u3aQXLkIBAEwPn/p3evjtgduarROGRInRyyDCQX3NW8/hz5vLCxsbGxsbGxsbEfyX7Fz38GCn67tNAvI/z7c7tmbGxs7L3Z+fTvwG8nu1z6O0byvl4zNjY29gHsZJp8Kfk3yQg3rAcbGxsbOy4Drr/Mx0y2DxsbGxv7LnY7QjvyypqxsbGxz2GvxPSzsOm6OMnffDxLw8bGxn48uy0wnvDzj/a3sbGxsR/MXrlGc10MtEv8+AUgbGxs7E3Z+cGQb0ReSOSxUb6V2NjY2GeyV8BJWD8rOWbb93YEbGxs7K3ZbRs1byTksdRsW4tNx8bGxt6Ufd12zZdyVwnRHofFgYeNjY29KbstOdrjZFai5G9u6G9jY2Nj/3J2G7jngPaYnEVL+TfY2NjYu7KvJ8hLlPwoyqP/2UWfYZaGjY2NvQW7jWl+5pm1k7GxsbFPZkdDfOBYalu5dXSFjY2NfQy7PR7y4L49tPI3yVzY2NjYe7PvCoPuWvT6ZZ26v42NjY39y9lt3J83emeXgdrCJvoeGxsbe2t2fo1yfbPaI+06xio2DhsbG3tT9ieKhzaEWmk55E1obGxs7F3ZbcM1ad/e1ULOI6fh5UtsbGzs7dhJUdEuOvk+ObryYKsOlbCxsbG3YOfB/WyhK+2H/Orn8PIlNjY29gHsWfzULreNmeoLndjY2NgHsPPA6Oa4p7yI2cZb2NjY2KexZ22AvERpg6E22KpDJWxsbOyN2Ekon8f9ybGUb8fssMTGxsY+gd0+0QRlGHR9FM3Cr29CJWxsbOyN2LP45q4NurdtUIdK2NjY2BuxE0B7IM3ase0RVZRJ2NjY2Aewk4CmDYNmc83avd/Mjo2NjY0d/LuffzMrMGYlCjY2NjZ2y56VNCt/FTWSsbGxsQ9g503WtuRo27cF5vI9NjY29jns2aXGdhHtRZ/2us8H+9vY2NjYD2af82BjY2NjY2NjY2M/5vkLN7ua3Rm5qBgAAAAASUVORK5CYII=">
+    
+</ul>
+
     
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/06/11/js-design-mode/">js-设计模式</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-36个设计模式
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/06/11/js-design-mode/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/head.png" width="44px" height="44px" alt="zongyuan.ning's avatar">
-            </div>
-            <div>
-                <strong>zongyuan.ning</strong>
-                <span>6月 11, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            
-          
-              <!-- Category -->
-              <span class="post_entry-category post_tag-link">
-                  <a class="post_category-link" href="/categories/技术/">技术</a>
-              </span>
-            
-            |
-            
-                <a class="post_tag-link" href="/tags/javascript/">javascript</a>
-            
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
+    <!-- Tags (bookmark) -->
     
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--10dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Pure Thumbnail -->
-            <div class="post-thumbnail-pure mdl-card__media mdl-color-text--grey-50" style="background-color:#6FC1EA !important">
-        
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <!-- <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/javascript/">javascript</a>
+    </ul> -->
+    <a class="post_tag-link" href="/tags/javascript/">javascript</a>
     
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/06/08/css-tips/">css-tips</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-常用的一些css小技巧，收录中…
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/06/08/css-tips/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/head.png" width="44px" height="44px" alt="zongyuan.ning's avatar">
-            </div>
-            <div>
-                <strong>zongyuan.ning</strong>
-                <span>6月 08, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            
-          
-              <!-- Category -->
-              <span class="post_entry-category post_tag-link">
-                  <a class="post_category-link" href="/categories/技术/">技术</a>
-              </span>
-            
-            |
-            
-                <a class="post_tag-link" href="/tags/css/">css</a>
-            
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
+    <!-- Share -->
     
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--10dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="../imgs/pixi.png">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/05/31/sublime-license/">sublime-注册码</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-sublime text3 3161 注册码
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/05/31/sublime-license/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/head.png" width="44px" height="44px" alt="zongyuan.ning's avatar">
-            </div>
-            <div>
-                <strong>zongyuan.ning</strong>
-                <span>5月 31, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            
-          
-              <!-- Category -->
-              <span class="post_entry-category post_tag-link">
-                  <a class="post_category-link" href="/categories/技术/">技术</a>
-              </span>
-            
-            |
-            
-                <a class="post_tag-link" href="/tags/sublime/">sublime</a>
-            
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--10dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="/2018/05/31/pixi/pixi.png">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/05/31/pixi/">pixi</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-Pixi.js是一款超快的开源HTML5 2D渲染引擎，使用带有Canvas回调功能的WebGL
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/05/31/pixi/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/head.png" width="44px" height="44px" alt="zongyuan.ning's avatar">
-            </div>
-            <div>
-                <strong>zongyuan.ning</strong>
-                <span>5月 31, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            
-          
-              <!-- Category -->
-              <span class="post_entry-category post_tag-link">
-                  <a class="post_category-link" href="/categories/技术/">技术</a>
-              </span>
-            
-            |
-            
-                <a class="post_tag-link" href="/tags/javascript/">javascript</a>
-            
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--10dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="/2018/05/29/css-world/css_world.png">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/05/29/css-world/">CssWorld-笔记</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-茫茫星海中鲸鱼永不犯错的航行， 那是因为有星辰的指引; 芸芸CSS世界中想要不断突破瓶颈， 需要有本书的指引。
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/05/29/css-world/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/head.png" width="44px" height="44px" alt="zongyuan.ning's avatar">
-            </div>
-            <div>
-                <strong>zongyuan.ning</strong>
-                <span>5月 29, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            
-          
-              <!-- Category -->
-              <span class="post_entry-category post_tag-link">
-                  <a class="post_category-link" href="/categories/技术/">技术</a>
-              </span>
-            
-            |
-            
-                <a class="post_tag-link" href="/tags/css/">css</a>
-            
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--10dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="/2018/05/29/init-blog/hexo.png">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/05/29/init-blog/">Hexo-博客搭建记</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-搭建博客，构思已久。却停滞于行动，此次趁着受人之托，得以窥见其中一二
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/05/29/init-blog/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/head.png" width="44px" height="44px" alt="zongyuan.ning's avatar">
-            </div>
-            <div>
-                <strong>zongyuan.ning</strong>
-                <span>5月 29, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            
-          
-              <!-- Category -->
-              <span class="post_entry-category post_tag-link">
-                  <a class="post_category-link" href="/categories/技术/">技术</a>
-              </span>
-            
-            |
-            
-                <a class="post_tag-link" href="/tags/hexo/">hexo</a>
-            
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
     
 
     
 
+    <!-- Share Weibo -->
     
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=js-设计模式&url=https://627235655.github.io/2018/06/11/js-design-mode/index.html&pic=https://627235655.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
 
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=js-设计模式&url=https://627235655.github.io/2018/06/11/js-design-mode/index.html&via=zongyuan.ning" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
 
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://627235655.github.io/2018/06/11/js-design-mode/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
 
-        locatePost = locatePost.next();
-    }
-</script>
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://627235655.github.io/2018/06/11/js-design-mode/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
 
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <blockquote>
+<p>36个设计模式<br><a id="more"></a></p>
+</blockquote>
+<h4 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h4><h5 id="类的实现-es5"><a href="#类的实现-es5" class="headerlink" title="类的实现(es5)"></a>类的实现(es5)</h5><pre><code>var Book = function(name) {
+    var id = 1; // 私有变量
+    var getId = function() {
+        console.log(id)
+    }; // 私有方法
+    this.name = name; // 公有变量
+    this.setName = function(name) {
+        this.name = name;
+    } // 公有方法
+}
+Book.prototype = {
+    price: 100, // 静态公有属性
+    getPrice: function() {
+        console.log(this.price);
+    } // 静态公有方法
+}
+</code></pre><p>闭包是有权访问另外一个函数作用域中变量的函数，即在一个函数内部创建另一个函数</p>
+<h5 id="简单工厂模式"><a href="#简单工厂模式" class="headerlink" title="简单工厂模式"></a>简单工厂模式</h5>
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            感谢阅读 thx~
+                        </strong>
+                        <br>
+                        <strong>本文链接：</strong><a href="https://627235655.github.io/2018/06/11/js-design-mode/">https://627235655.github.io/2018/06/11/js-design-mode/</a>
+                    </p>
+                </blockquote>
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2018/06/14/color-btns/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            上一篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/06/08/css-tips/" id="post_nav-older" class="next-content">
+            下一篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
                         
                             <!-- Overlay For Active Sidebar -->
@@ -1468,6 +1281,10 @@ It will not impact the appearance and can give developers a lot of support :)
 <!-- Import prettify js  -->
 
     
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
 
 
 
@@ -1480,6 +1297,11 @@ It will not impact the appearance and can give developers a lot of support :)
     });
 
     
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
         
     
     
