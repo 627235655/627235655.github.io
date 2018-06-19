@@ -338,6 +338,16 @@ zh"
         #canvas{
             position: fixed;
         }
+        .player{
+            border: 1px solid #f5f5f5 !important;
+            box-shadow: none !important;
+        }
+        .icon-arrow {
+            display: inline-block;
+            width: 20px;
+            height: 1ex;
+            background: url(arrow-down.png) no-repeat center/15px; 
+        }
     </style>
         <head>
     <meta charset="utf-8">
@@ -865,7 +875,7 @@ Pixi.js是一款超快的开源HTML5 2D渲染引擎，使用带有Canvas回调�
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/05/31/sublime-license/" id="post_nav-newer" class="prev-content">
+        <a href="/2018/06/08/css-tips/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -879,7 +889,7 @@ Pixi.js是一款超快的开源HTML5 2D渲染引擎，使用带有Canvas回调�
 
     <!-- Next Nav -->
     
-        <a href="/2018/05/30/mark-down/" id="post_nav-older" class="next-content">
+        <a href="/2018/05/31/sublime-license/" id="post_nav-older" class="next-content">
             下一篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
@@ -970,7 +980,7 @@ Pixi.js是一款超快的开源HTML5 2D渲染引擎，使用带有Canvas回调�
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">5</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">5</span></a>
             </ul>
         </li>
         
@@ -989,7 +999,7 @@ Pixi.js是一款超快的开源HTML5 2D渲染引擎，使用带有Canvas回调�
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/写作/">写作<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/技术/">技术<span class="sidebar_archives-count">7</span></a>
+                <a class="sidebar_archives-link" href="/categories/写作/">写作<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/技术/">技术<span class="sidebar_archives-count">8</span></a>
             </ul>
         </li>
         
@@ -1008,7 +1018,7 @@ Pixi.js是一款超快的开源HTML5 2D渲染引擎，使用带有Canvas回调�
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/tags/css/">css<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/tags/hexo/">hexo<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/tags/javascript/">javascript<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/tags/markdown/">markdown<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/tags/sublime/">sublime<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/tags/css/">css<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/tags/hexo/">hexo<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/tags/javascript/">javascript<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/tags/markdown/">markdown<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/tags/sublime/">sublime<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -1052,7 +1062,7 @@ Pixi.js是一款超快的开源HTML5 2D渲染引擎，使用带有Canvas回调�
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">8</span>
+                <span class="sidebar-badge">9</span>
             </a>
         </li>
         
@@ -1070,6 +1080,11 @@ It will not impact the appearance and can give developers a lot of support :)
 如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
 它不会影响美观并可以给开发者很大的支持和动力。 :)
 -->
+
+
+<div id="music163player" style="margin-top: 50px;">
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=29087154&auto=1&height=66"></iframe>
+</div>
 
 <!-- Sidebar Divider -->
 
@@ -1368,8 +1383,9 @@ console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viose
             this.x = x;
             this.y = y;
             this.r = Math.random() * 2 ;
-            this._mx = Math.random() ;
-            this._my = Math.random() ;
+            this.speed = 1;
+            this._mx = Math.random() *  this.speed;
+            this._my = Math.random() * this.speed;
             this.move_type = Math.random() > 0.5 ? false : true;
             this.color = '#fff';//'rgba('+(Math.random() * 255)+','+(Math.random() * 255)+','+(Math.random() * 255)+')';
 
@@ -1465,7 +1481,7 @@ console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viose
         }
         draw();
     }
-    window.addEventListener('load', init(222));
+    window.addEventListener('load', init(300));
     // window.onmousemove = function (e) {
     //     e = e || window.event;
     //     current_circle.x = e.clientX;
@@ -1479,9 +1495,7 @@ console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viose
     // window.onmouseout = function () {
     //     current_circle.x = null;
     //     current_circle.y = null;
-
     // };
-
 </script>
 </body>
 

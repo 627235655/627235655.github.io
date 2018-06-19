@@ -392,7 +392,7 @@ zh"
     
     <title>
         
-            分类: 写作 | 
+            js-tips | 
         
         n顾盼神飞
     </title>
@@ -402,8 +402,9 @@ zh"
     <link rel="icon" href="/img/favicon.png">
 
     <meta name="format-detection" content="telephone=no"/>
-    <meta name="description" itemprop="description" content="wodexiaowu">
-    <meta name="keywords" content="技术 生活">
+    <meta name="description" itemprop="description" content="
+常用的一些js小技巧，收录中…">
+    <meta name="keywords" content="技术 生活,javascript">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -430,6 +431,9 @@ zh"
         <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/atelier-lakeside-light.min.css?vHkP60BXIENHxF6lUdDXhA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
             
         
 
@@ -561,7 +565,7 @@ zh"
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="n顾盼神飞">
-    <meta name="msapplication-starturl" content="https://627235655.github.io/categories/写作/">
+    <meta name="msapplication-starturl" content="https://627235655.github.io/2018/06/19/js-tips/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="n顾盼神飞">
@@ -576,13 +580,17 @@ zh"
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://627235655.github.io/categories/写作/">
+    <meta property="og:url" content="https://627235655.github.io/2018/06/19/js-tips/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="分类: 写作 | n顾盼神飞">
+    <meta property="og:title" content="js-tips | n顾盼神飞">
     <meta property="og:image" content="/img/favicon.png">
-    <meta property="og:description" content="wodexiaowu">
-    
+    <meta property="og:description" content="
+常用的一些js小技巧，收录中…">
+    <meta property="og:article:tag" content="javascript"> 
 
+    
+        <meta property="article:published_time" content="Tue Jun 19 2018 16:39:28 GMT+0800">
+        <meta property="article:modified_time" content="Tue Jun 19 2018 17:23:16 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -590,13 +598,44 @@ zh"
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://627235655.github.io/categories/写作/index.html" />
+        <link rel="canonical" href="https://627235655.github.io/2018/06/19/js-tips/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://627235655.github.io/2018/06/19/js-tips/index.html",
+    "headline": "js-tips",
+    "datePublished": "Tue Jun 19 2018 16:39:28 GMT+0800",
+    "dateModified": "Tue Jun 19 2018 17:23:16 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "zongyuan.ning",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/head.png"
+        },
+        "description": "享受生命中每一个脚步~"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "n顾盼神飞",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",javascript技术 生活",
+    "description": "
+常用的一些js小技巧，收录中…",
+}
+</script>
 
 
     
@@ -630,103 +669,295 @@ zh"
                                 <span id="MD-burger-id" class="MD-burger-layer"></span>
                             </button>
                         
-                        <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                        <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
-        
-    
-
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--10dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="/2018/05/30/mark-down/markdown.jpg">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/05/30/mark-down/">markDown语法</a></p>
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
     </div>
+    -->
 
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#一、算法"><span class="post-toc-number">1.</span> <span class="post-toc-text">一、算法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#q1-判断一个单词是否为回文"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">q1:判断一个单词是否为回文</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#q2：数组去重"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">q2：数组去重</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#q3：排序算法"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">q3：排序算法</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
         
-            
-它实际上是个非常简单、非常容易学习的排版语法
+            <!-- Pure Thumbnail -->
+            <div class="post_thumbnail-pure mdl-card__media mdl-color-text--grey-50" style="background-color:#6FC1EA !important">
         
-        &nbsp;&nbsp;&nbsp;
+    
+            <p class="article-headline-p">
+                js-tips
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/head.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>
+            zongyuan.ning
+        </strong>
         <span>
-            <a href="/2018/05/30/mark-down/" target="_self">阅读全文</a>
+            6月 19, 2018
+            <span class="m-l-md">【字数：251】</span>
+            <span  class="m-l-md">【阅读时长：1min】</span>
         </span>
     </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/head.png" width="44px" height="44px" alt="zongyuan.ning's avatar">
-            </div>
-            <div>
-                <strong>zongyuan.ning</strong>
-                <span>5月 30, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            
-          
-              <!-- Category -->
-              <span class="post_entry-category post_tag-link">
-                  <a class="post_category-link" href="/categories/写作/">写作</a>
-              </span>
-            
-            |
-            
-                <a class="post_tag-link" href="/tags/markdown/">markdown</a>
-            
-            
+    <div class="section-spacer"></div>
 
-            
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACXUlEQVR42u3aQZLjIBAEQP//07sPmJBcBVJL4UhOE7ItOjkAU/D599Ptg4eHh4eHh4eH9zLeJ25/f3X05OjTtq/F2vDw8PBGeF+m2oPvJKT8De2nh/3i4eHhDfLOJ+jz768NR/Ikrw0PDw/v/bx8yl5bAPDw8PB+iXe0JOQhQvI2PDw8vPfz8ik+30Yn4e9aVIGHh4f3LK+dyif/Hj3fw8PDwwt4bduPbs/flocdhxXi4eHh3czLJ+KEmgPyi1x5PXh4eHgzvDYwvSOQTd6Z1ICHh4c3ycsPsXYWlWTrvH99AQ8PD2+Sd22A24YR7cJTLwx4eHh4F/Hy0KGd3NswIt9Gfwk18PDw8EZ4O1N5/tt805wEvnh4eHjP8nZi2Z0FIA+REzYeHh7eDC+/CrA/oRclxrEIHh4e3rO8nQ52Cmor+bJE4eHh4Q3y1soqpuylw60kFMbDw8Ob5H3itoNZG5QLttR4eHh4N/DOO26D2uRIrLg+FX8TDw8Pb5J31QF/+2TtDXUYgYeHhzfCayOD/dChPWyrwwg8PDy823jtBaz8otXa88WtPx4eHt4gr+2g3YInQ7YzKHh4eHhP8dYm+jyQzQcoHwI8PDy8SV7b8sOq/BCrZXwZSjw8PLybee2lq/ONcl5usggtXvbCw8PDG+HlgWlSdHspISm92GTj4eHhDfJ2DvXzUDiPP9qLqnh4eHjv57Wb47Vy62sKeHh4eC/m7QQW7UAU/wDg4eHhDfLyWCE/BrtqeRiKcfHw8PBuOADLj6wWiyt7x8PDw5vn/V7Dw8PDw8PDw8N7QfsPKmgWEaAPSsQAAAAASUVORK5CYII=">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <!-- <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/javascript/">javascript</a>
+    </ul> -->
+    <a class="post_tag-link" href="/tags/javascript/">javascript</a>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=js-tips&url=https://627235655.github.io/2018/06/19/js-tips/index.html&pic=https://627235655.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=js-tips&url=https://627235655.github.io/2018/06/19/js-tips/index.html&via=zongyuan.ning" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://627235655.github.io/2018/06/19/js-tips/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://627235655.github.io/2018/06/19/js-tips/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
 </div>
 
-            
-            
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <blockquote>
+<p>常用的一些js小技巧，收录中…<br><a id="more"></a></p>
+</blockquote>
+<h4 id="一、算法"><a href="#一、算法" class="headerlink" title="一、算法"></a>一、算法</h4><h5 id="q1-判断一个单词是否为回文"><a href="#q1-判断一个单词是否为回文" class="headerlink" title="q1:判断一个单词是否为回文"></a>q1:判断一个单词是否为回文</h5><blockquote>
+<p>回文是指把相同的词汇或句子，在下文中调换位置或颠倒过来，产生首尾回环的情趣，叫做回文，也叫回环</p>
+</blockquote>
+<p>核心代码：</p>
+<pre><code>function checkPalindrom(str) {  
+    return str === str.split(&apos;&apos;).reverse().join(&apos;&apos;);
+}
+</code></pre><h5 id="q2：数组去重"><a href="#q2：数组去重" class="headerlink" title="q2：数组去重"></a>q2：数组去重</h5><p>es6实现：</p>
+<pre><code>var new_arr = [...new Set(old_arr)];
+</code></pre><p>es5实现：</p>
+<pre><code>var reNewArr = function(arr) {
+    let new_arr = [];
+    for (let i = 0, len = arr.length; i &lt; len; i++) {
+        if (!(new_arr.indexOf(arr[i]) &gt; -1)) {
+            new_arr.push(arr[i]);
+        }
+    }
+    return new_arr;
+}
+</code></pre><h5 id="q3：排序算法"><a href="#q3：排序算法" class="headerlink" title="q3：排序算法"></a>q3：排序算法</h5><p>冒泡排序：</p>
+<pre><code>function bubbleSort(arr){
+    if(arr.length&lt;=1) {
+        return arr;
+    }
+    for (let i = 0, len = arr.length; i &lt; len - 1; i++) {
+        for (let j = i + 1; j &lt; len; j ++) {
+            if (arr[i] &lt; arr[j]) {  // 此处控制升序或者降序
+                let item = arr[i];
+                arr[i] = arr[j];
+                arr[j] = item;
+            }
+        }
+    }
+    return arr;
+}
+</code></pre><p>快速排序：</p>
+<pre><code>function quickSort(arr) {
+    if(arr.length&lt;=1) {
+        return arr;
+    }
+    let left_arr = [],
+        right_arr = [],
+        q = arr[0],
+        len = arr.length;
+    for (let i = 1; i &lt; len; i++){
+        if(arr[i] &gt; q) {  // 此处控制升序或者降序
+            right_arr.push(arr[i])
+        } else {
+            left_arr.push(arr[i])
+        }
+    }
+    return [].concat(quickSort(left_arr),[q],quickSort(right_arr));
+}   
+</code></pre>
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            感谢阅读 thx~
+                        </strong>
+                        <br>
+                        <strong>本文链接：</strong><a href="https://627235655.github.io/2018/06/19/js-tips/">https://627235655.github.io/2018/06/19/js-tips/</a>
+                    </p>
+                </blockquote>
         
     
 
     
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
-</script>
-
-    
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/06/14/color-btns/" id="post_nav-older" class="next-content">
+            下一篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
                         
                             <!-- Overlay For Active Sidebar -->
@@ -1093,6 +1324,10 @@ It will not impact the appearance and can give developers a lot of support :)
 <!-- Import prettify js  -->
 
     
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
 
 
 
@@ -1105,6 +1340,11 @@ It will not impact the appearance and can give developers a lot of support :)
     });
 
     
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
         
     
     
