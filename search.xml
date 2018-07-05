@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[网页无障碍访问知识集]]></title>
+    <url>%2F2018%2F06%2F21%2Faccessibility-web%2F</url>
+    <content type="text"><![CDATA[WAI-ARIA指无障碍网页应用。主要针对的是视觉缺陷，失聪，行动不便的残疾人以及假装残疾的测试人员。 ARIA常用属性role=&#39;button&#39;表示按钮所以平时最好不能用div和span来模拟按钮，因为会失去键盘可访问性如若要 则需要加上role=&#39;button&#39;，tabindex=0aria-hidden字符串。可选值为true和false, true表示元素隐藏(不可见)，false表示元素可见aria-expanded 展开还是收起，菜单，自定义下拉等用的比较多。aria-checked 选中还是未选。aria-selected 选中还是未选。aria-disabled 禁用还是可用。aria-invalid 验证正确还是错误。其余属性可见张大大的博客]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>html</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js-tips]]></title>
+    <url>%2F2018%2F06%2F19%2Fjs-tips%2F</url>
+    <content type="text"><![CDATA[常用的一些js小技巧，收录中… 一、算法q1:判断一个单词是否为回文 回文是指把相同的词汇或句子，在下文中调换位置或颠倒过来，产生首尾回环的情趣，叫做回文，也叫回环 核心代码： function checkPalindrom(str) { return str === str.split(&apos;&apos;).reverse().join(&apos;&apos;); } q2：数组去重es6实现： var new_arr = [...new Set(old_arr)]; es5实现： var reNewArr = function(arr) { let new_arr = []; for (let i = 0, len = arr.length; i &lt; len; i++) { if (!(new_arr.indexOf(arr[i]) &gt; -1)) { new_arr.push(arr[i]); } } return new_arr; } q3：排序算法冒泡排序： function bubbleSort(arr){ if(arr.length&lt;=1) { return arr; } for (let i = 0, len = arr.length; i &lt; len - 1; i++) { for (let j = i + 1; j &lt; len; j ++) { if (arr[i] &lt; arr[j]) { // 此处控制升序或者降序 let item = arr[i]; arr[i] = arr[j]; arr[j] = item; } } } return arr; } 快速排序： function quickSort(arr) { if(arr.length&lt;=1) { return arr; } let left_arr = [], right_arr = [], q = arr[0], len = arr.length; for (let i = 1; i &lt; len; i++){ if(arr[i] &gt; q) { // 此处控制升序或者降序 right_arr.push(arr[i]) } else { left_arr.push(arr[i]) } } return [].concat(quickSort(left_arr),[q],quickSort(right_arr)); }]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[基于颜色的按钮UI组件生成]]></title>
+    <url>%2F2018%2F06%2F14%2Fcolor-btns%2F</url>
+    <content type="text"><![CDATA[按钮作为网页设计中的一名常客，游走于pc和移动端，基于状态和基于颜色会有什么不同呢？ 本文参考来源于-http://www.zhangxinxu.com/wordpress/2016/11/development-ui-component-based-on-css-color/ 基于状态的按钮参考微信中的设计-https://weui.io/#buttonhtml: &lt;a href=&quot;#&quot; class=&quot;weui_btn weui_btn_primary&quot;&gt;按钮&lt;/a&gt; &lt;a href=&quot;#&quot; class=&quot;weui_btn weui_btn_warn&quot;&gt;确认&lt;/a&gt; &lt;a href=&quot;#&quot; class=&quot;weui_btn weui_btn_default&quot;&gt;按钮&lt;/a&gt; css: .weui-btn { position: relative; display: block; margin-left: auto; margin-right: auto; padding-left: 14px; padding-right: 14px; box-sizing: border-box; font-size: 18px; text-align: center; text-decoration: none; color: #FFFFFF; line-height: 2.55555556; border-radius: 5px; overflow: hidden; } .weui-btn_primary { background-color: #1aad19; } .weui-btn_default { color: #000000; background-color: #F8F8F8; } .weui-btn_warn { background-color: #E64340; } 实例：按钮 确认 按钮 基于状态的区分ui组件，在语义上是非常明确的，但是对应css代码，则显得异常冗长 基于颜色的按钮1.设定颜色color.dark { color: #33373d; } .gray { color: #969ba3; } .blue { color: #4284ed; } .green { color: #7ed321; } .orange { color: #f0643a; } .yellow { color: #f0c53a; } .purple { color: #a091ff; } .red { color: #ed424b; } .white { color: #fff; } 2.基于color设置按钮样式记住border边框默认是color的颜色，currentColor变量也指当前字体颜色colorcss如下： .ning-btn { font-size: 14px; display: inline-block; padding: .179rem 1em; text-align: center; border: 1px solid; border-radius: 2px; background-color: currentColor; } 然后你会发现按钮的字体颜色不是和背景颜色一样了吗，岂不是成为了一个纯色按钮块这时，请出我们的::first-line,因为常规的按钮上只有一行文字 .ning-btn::first-line { color: #fff; } 3.根据font-size控制按钮尺寸._xs { font-size: 12px; } ._sm { font-size: 14px; } ._md { font-size: 16px; } ._lg { font-size: 18px; } 4.兼容性保证currentColor不兼容低版本浏览器的话，直接同时设定.dark { background-color: #33373d; color: #33373d; } 对于容易产生冲突的的附属类名，添加一个前缀，比如._dark { background-color: #33373d; color: #33373d; }，约定带通用前缀的代码是不能单独使用的。最终实现如下： &lt;a href=&quot;#&quot; class=&quot;ning-btn _xs _white&quot;&gt;小的白色按钮&lt;/a&gt; &lt;a href=&quot;#&quot; class=&quot;ning-btn _sm _blue&quot;&gt;正常蓝色按钮&lt;/a&gt; &lt;a href=&quot;#&quot; class=&quot;ning-btn _md _yellow&quot;&gt;中等黄色按钮&lt;/a&gt; &lt;a href=&quot;#&quot; class=&quot;ning-btn _lg _purple&quot;&gt;大的紫色按钮&lt;/a&gt; 小的白色按钮 正常蓝色按钮 中等黄色按钮 大的紫色按钮 结语本策略能够实现的重点技巧就是利用::first-line伪元素的文字控色技术所以也仅限用于只有一行文字的按钮]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js-设计模式]]></title>
+    <url>%2F2018%2F06%2F11%2Fjs-design-mode%2F</url>
+    <content type="text"><![CDATA[36个设计模式 面向对象编程类的实现(es5)var Book = function(name) { var id = 1; // 私有变量 var getId = function() { console.log(id) }; // 私有方法 this.name = name; // 公有变量 this.setName = function(name) { this.name = name; } // 公有方法 } Book.prototype = { price: 100, // 静态公有属性 getPrice: function() { console.log(this.price); } // 静态公有方法 } 闭包是有权访问另外一个函数作用域中变量的函数，即在一个函数内部创建另一个函数 简单工厂模式]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[css-tips]]></title>
+    <url>%2F2018%2F06%2F08%2Fcss-tips%2F</url>
+    <content type="text"><![CDATA[常用的一些css小技巧，收录中… tips1:改变滚动条样式/*滚动条样式*/ .scrollbar::-webkit-scrollbar {/*滚动条整体样式*/ width: 4px; /*高宽分别对应横竖滚动条的尺寸*/ height: 4px; } .scrollbar::-webkit-scrollbar-thumb {/*滚动条里面小方块*/ border-radius: 5px; -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2); background: rgba(0,0,0,0.2); } .scrollbar::-webkit-scrollbar-track {/*滚动条里面轨道*/ -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2); border-radius: 0; background: rgba(0,0,0,0.1); } tips2:超出2行显示省略号….elis-2{ overflow:hidden; //超出的文本隐藏 text-overflow:ellipsis; //溢出用省略号显示 display:-webkit-box; //将对象作为弹性伸缩盒子模型显示。 -webkit-box-orient:vertical; //从上到下垂直排列子元素（设置伸缩盒子的子元素排列方式） -webkit-line-clamp:2; //这个属性不是css的规范属性，需要组合上面两个属性，表示显示的行数。 } tips3:content换行技术实现loading点点点效果html代码: 上传中&lt;dot&gt;...&lt;/dot&gt; css代码： dot { display: inline-block; height: 1em; line-height: 1; text-align: left; vertical-align: -.25em; overflow: hidden; } dot::before { display: block; content: &apos;...\A..\A.&apos;; white-space: pre-wrap; /* 也可以是white-space: pre */ animation: dot 3s infinite step-start both; } @keyframes dot { 33% { transform: translateY(-2em); } 66% { transform: translateY(-1em); } } 个人感觉关键还是在于animation中的step属性,能实现分段动画的效果。实例： 上传中… tips4:css中的单位pxpx为绝对单位，即基于物理像素的单位。 emem为相对单位，指的是基于当前元素的字体大小的单位。比如元素font-size:10px，那么10em等于100px。 remrem也是相对单位，指的是基于根元素(html)字体大小的单位。比如根元素font-size:10px，那么10rem等于100px。主要应用于移动端的尺寸自适应布局。 excss中的一个相对单位，指的是字母x的高度，即x-height，而x的高度会受字体的影响。应用：不受字体和字号影响的内联元素的垂直居中对齐效果原理：内联元素默认是基线对齐，而基线就是x的底部，1ex就是一个x的高度，此时我们设置图标的大小为1ex，图标内背景图居中，文字与图标则可以水平垂直居中。css代码： .icon-arrow { display: inline-block; width: 20px; height: 1ex; background: url(arrow-down.png) no-repeat center; } 实例： 水平垂直居中图标 css-tipscss3实现：display: flex; align-items: center;##### ch也是一个相对单位，1ch 表示一个 0 字符的宽度，所以 6 个 0 所占据的宽度就是 6ch。应用的话，主要是配合等宽字体。##### tips5:css画三角形的几种方式###### 1、border实现这个应该属于基本操作了，直接上代码css代码: .border-triangle{ width: 0; height: 0; border: 10px solid; border-color: #0081fe transparent transparent transparent; // 注意你想要那个朝向的三角形，则只需写与之相反方向的颜色即可 }###### 2、clip-path polygon图形构建css代码: .clip-triangle{ display: inline-block; width: 20px; height: 20px; background-color: currentColor; clip-path: polygon(5px 10px, 16px 3px, 16px 17px); }以上所有三角形实例： border-triangle clip-triangle]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[pixi]]></title>
+    <url>%2F2018%2F05%2F31%2Fpixi%2F</url>
+    <content type="text"><![CDATA[Pixi.js是一款超快的开源HTML5 2D渲染引擎，使用带有Canvas回调功能的WebGL]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[sublime-注册码]]></title>
+    <url>%2F2018%2F05%2F31%2Fsublime-license%2F</url>
+    <content type="text"><![CDATA[sublime text3 3161 注册码 —– BEGIN LICENSE —– Country Rebel Single User License EA7E-993095 19176BCE 3FF86EA0 3CE86508 6BE4DCA7 9F74D761 4D0CAD8B E4033008 43FC73F3 1C01F6DD C4829BE9 E7830578 A4823ADC 61B224F1 DC93C458 ABAAAE0F 925C32D4 04A83C36 813FF6C8 9877942C 4418F99C 2F15E5B8 544EDB80 D9A86985 4CBBA6A8 998DE3E4 7FB33E15 6CD30357 6DC96CEA ECB1BC4E D8010D5A 77BA86C8 BA7F76CC —— END LICENSE ——]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>sublime</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[markDown语法]]></title>
+    <url>%2F2018%2F05%2F30%2Fmark-down%2F</url>
+    <content type="text"><![CDATA[它实际上是个非常简单、非常容易学习的排版语法 一、标题# 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ###### 六级标题 二、列表1、无序列表 item1 item2 item3 2、有序列表 item1 item2 item3 三、引用 这里是引用 四、图片和链接1、插入链接百度 2、插入图片 五、粗体、斜体、删除线这是粗体这是斜体这是删除线 六、表格 Tables Are Cool col 3 is right-aligned $1600 col 2 is centered $12 zebra stripes are neat $1 七、代码块.post-title { margin-bottom: 20px; font-size: 28px; text-align: center; } 八、代码框npm i react -g\这是单行代码\ 九、分割线 其实markdown也支持与html混用应该能做出一些炫酷的效果不知道支不支持css(js模板引擎生成的html里可以引入css)]]></content>
+      <categories>
+        <category>写作</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CssWorld-笔记]]></title>
+    <url>%2F2018%2F05%2F29%2Fcss-world%2F</url>
+    <content type="text"><![CDATA[茫茫星海中鲸鱼永不犯错的航行， 那是因为有星辰的指引; 芸芸CSS世界中想要不断突破瓶颈， 需要有本书的指引。 概述 CSS 世界的诞生就是为图文信息展示服务的 文档流的概念CSS世界构建的基石是HTML，而HTML最具代表的两个基石&lt;div&gt;和&lt;span&gt;正好是CSS世界中块级元素和内联级元素的代表，它们对应的正是图 1-3 所示的盛水容器中的水和木头，其特性表现也正如现实世界的水和木头，如图 1-4 所示。 常见术语先看一段css代码 p{ color: #999; } 属性即上面的color 值值大多与数字挂钩 整数值，如 z-index:1 中的 1，属于&lt;integer&gt;，同时也属于&lt;number&gt;。 数值，如 line-height:1.5 中的 1.5，属于&lt;number&gt;。 百分比值，如 padding:50%中的 50%，属于&lt;percent&gt;。 长度值，如 99px。 颜色值，如#999，red。 流、元素与基本尺寸块级元素基本特征，也就是一个水平流上只能单独显示一个元素，多个块级元素则换行显示块级元素 不等于 display:block，list-item,table也是块级元素按照常规理解，css中的每个元素都会生成一个盒子，比如：内联元素-&gt;内联盒子和块级元素-&gt;块级盒子其实，是每个元素会生成两个盒子，外在盒子（控制内联或者块级）和容器盒子（即盒子模型）比如：display: inline-block外在盒子就由inline控制，所以可以和内联元素一行显示而内容盒子就由block控制，所以可以设置宽高如果遵循这种理解display:block应该脑补成 display:block-blockdisplay:table应该脑补成 display:block-table由display: inline-block可以看出，width和height作用在内容盒子上而内容盒子又分为4个盒子，分别是 content box、padding box、border box和 margin box content box 环绕着 width 和 height 给定的矩形（CSS2.1规范） 所以默认的宽度作用在容器盒子的content box上引出css3属性 box-sizingtips: margin-box的背景色永远是透明的 content 内容替换技术 tips幽灵空白节点具体指的是：在 HTML5 文档声明中，内联元素的所有解析和渲染表现就如同每个行框盒子的前面有一个“空白节点”一样。tips:有一个前提，文档声明必须是 HTML5 文档声明（HTML 代码如下），如果还是很多年前的老声明，则不存在“幽灵空白节点”。]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo-博客搭建记]]></title>
+    <url>%2F2018%2F05%2F29%2Finit-blog%2F</url>
+    <content type="text"><![CDATA[搭建博客，构思已久。却停滞于行动，此次趁着受人之托，得以窥见其中一二 本文参考来源于–【hexo搭建博客最全攻略】–【手把手教 GitHub + Hexo 搭建博客】 一、环境准备需要node git github账号，于各自网站安装即可。 二、安装Hexostep1:全局安装hexo$ npm i hexo-cli -g step2:进入指定目录初始化hexo项目# 创建hexo文件夹 $ mkdir hexo # 进入hexo文件夹 $ cd hexo # 初始化hexo $ hexo init # 安装依赖包 $ npm install # 部署到本地(调试使用) 简写 hexo s $ hexo server # 先运行上面的命令，再在浏览器输入localhost:4000即可 # 问题：执行hexo server提示找不到该指令 # 解决办法：在Hexo 3.0 后server被单独出来了，需要安装server，安装的命令如下： $ npm install hexo -server --save step3:将本地hexo项目与github远程仓库关联进入github新建Repositorie注意Repositorie的名字一定要满足your Account Name/your Account Name.github.io以上配置完成后保存 然后回到终端执行 #安装一个插件，这样才能将你写好的文章部署到github服务器上并让别人浏览到。 npm install hexo-deployer-git --save #安装完成后在终端中依次执行如下代码(为了简单后续统称为三步) #清理缓存 hexo clean #进行渲染 简写 hexo g hexo generate #调试完毕后使用 简写为 hexo d来部署到git服务器 hexo deploy 之后每次更新代码或者文档都需要重新部署 将这里的三步重新执行一次其实我们可以在hexo项目的根目录下 新建一个node命令来整合这三步 &quot;scripts&quot;: { &quot;build&quot;: &quot;hexo clean &amp;&amp; hexo g &amp;&amp; hexo d&quot; } 之后每次更新在终端执行npm run build即可 执行完以上操作后打开浏览器地址了输入http://你github名字.github.io就可以看到效果~ 三、更换主题切换 Hexo 主题非常容易，您只要在 themes 文件夹内，git clone 你喜欢的主题并修改 _config.yml 内的 theme 设定，即可切换主题…… 四、自定义主题创建 Hexo 主题非常容易，您只要在 themes 文件夹内，新增一个任意名称的文件夹然后参考更换主题步骤不过还是建议在已有的主题上进行个性化的修改，站在巨人的肩膀也是极好的~ tips新建文章hexo new post “文章名字” 字数统计&amp;阅读时长在根目录下安装 hexo-wordcount,运行：npm i hexo-wordcount --save在需要用到的地方添加 wordcount(page.content) min2read(post.content) 即可]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+</search>
