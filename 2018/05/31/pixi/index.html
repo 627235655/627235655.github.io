@@ -2,354 +2,8 @@
 <html style="display: none;" lang="
 zh"
     >
-    <style type="text/css">
-        /* reset */
-        pre,
-        code {
-            font-size: 12px !important;
-        }
-
-        .text-popup {
-            position: absolute!important;
-            z-index: 99;
-            color: red;
-            user-select: none;
-            white-space: nowrap;
-            transform: scale(1.5);
-            animation: textPopup ease 1s;
-        }
-
-        @keyframes textPopup {
-            0%,
-            100% {
-                opacity: 0;
-            }
-            25% {
-                opacity: 1;
-            }
-            100% {
-                transform: scale(2) translateY(-50px);
-            }
-        }
-
-        dot {
-            display: inline-block;
-            height: 1em;
-            line-height: 1;
-            text-align: left;
-            vertical-align: -.25em;
-            overflow: hidden;
-        }
-
-        dot::before {
-            display: block;
-            content: '...\A..\A.';
-            white-space: pre-wrap;
-            /* 也可以是white-space: pre */
-            animation: dot 3s infinite step-start both;
-        }
-
-        @keyframes dot {
-            33% {
-                transform: translateY(-2em);
-            }
-            66% {
-                transform: translateY(-1em);
-            }
-        }
-
-        .weui-btn {
-            position: relative;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            padding-left: 14px;
-            padding-right: 14px;
-            box-sizing: border-box;
-            font-size: 18px;
-            text-align: center;
-            text-decoration: none;
-            color: #FFFFFF;
-            line-height: 2.55555556;
-            border-radius: 5px;
-            overflow: hidden;
-        }
-
-        .weui-btn_primary {
-            background-color: #1aad19;
-        }
-
-        .weui-btn_default {
-            color: #000000;
-            background-color: #F8F8F8;
-        }
-
-        .weui-btn_warn {
-            background-color: #E64340;
-        }
-        /* 基本按钮 */
-
-        .ning-btn {
-            font-size: 14px;
-            display: inline-block;
-            padding: .179rem 1em;
-            text-align: center;
-            border-radius: 2px;
-            border: 1px solid;
-            background-color: currentColor;
-        }
-
-        .ning-btn::first-line {
-            color: #fff;
-        }
-        /* 变色按钮特殊处理 */
-
-        .ning-btn._white {
-            box-shadow: inset 1px 0 #e3e4e6, inset 0 1px #e3e4e6, inset 0 -1px #e3e4e6, inset -1px 0 #e3e4e6;
-        }
-
-        .ning-btn._white::first-line {
-            color: #33373d;
-        }
-        /* 交互与变色-加深效果 */
-
-        .ning-btn:active,
-        .ning-btn:hover {
-            background-image: -webkit-linear-gradient(to top, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05));
-            background-image: linear-gradient(to top, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05));
-        }
-        /* 小标签 */
-
-        .tag-solid {
-            font-size: 12px;
-            line-height: 1.5;
-            display: inline-block;
-            padding: 0 .25em;
-            border-radius: 2px;
-            background-color: currentColor;
-        }
-
-        .tag-solid::first-line {
-            color: #fff;
-        }
-        /* 带质感的标签 */
-
-        .tag-honor {
-            font-size: 12px;
-            line-height: 16px;
-            padding: 0 .5em;
-            display: inline-block;
-            text-align: center;
-            border: 1px solid #fff;
-            border-radius: 40px;
-            background-color: currentColor;
-            background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, .2), rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, 0) 50%);
-            background-image: linear-gradient(to bottom, rgba(255, 255, 255, .2), rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, 0) 50%);
-        }
-
-        .tag-honor::first-line {
-            color: #fff;
-        }
-        /* 线框标签 */
-
-        .tag-line {
-            font-size: 12px;
-            line-height: 20px;
-            display: inline-block;
-            padding: 0 1em;
-            border: 1px solid;
-            border-radius: 2em;
-            background-color: #fff;
-        }
-
-        .example-box{
-            position: relative;
-            padding: 20px;
-            background: #f5f5f5;
-            border: 1px solid #f5f5f5;
-        }
-        flex-box {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .flex-col-box {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .flex-center-box {
-            display: flex;
-            align-items: center;
-        }
-
-        @mixin flex-center-box {
-            display: flex;
-            align-items: center;
-        }
-
-        .clear-fix {
-            zoom: 1;
-        }
-
-        .clear-fix:after {
-            content: '';
-            display: block;
-            clear: both;
-        }
-
-        .text-left {
-            text-align: left;
-        }
-
-        .text-right {
-            text-align: right;
-        }
-        /** font **/
-
-        .f-base {
-            color: #444;
-        }
-
-        .f-light {
-            color: #999;
-        }
-
-        .fc-blue {
-            color: #0081fe;
-        }
-
-        .f-warning {
-            color: red;
-        }
-
-        .f-bold {
-            font-weight: bold;
-        }
-
-        .f-normal {
-            font-weight: normal;
-        }
-
-        .fs-xs {
-            font-size: 12px;
-        }
-
-        .fs-md {
-            font-size: 16px;
-        }
-
-        .fs-lg {
-            font-size: 18px;
-        }
-
-        .m-r-xs {
-            margin-right: 5px;
-        }
-
-        .m-r-sm {
-            margin-right: 10px;
-        }
-
-        .m-r-md {
-            margin-right: 20px;
-        }
-
-        .m-l-sm {
-            margin-left: 10px;
-        }
-
-        .m-l-md {
-            margin-left: 20px;
-        }
-
-        .m-l-lg {
-            margin-left: 30px;
-        }
-
-        .m-t-sm {
-            margin-top: 10px;
-        }
-
-        .m-t-md {
-            margin-top: 20px;
-        }
-
-        .m-b-sm {
-            margin-bottom: 10px;
-        }
-
-        .m-b-md {
-            margin-bottom: 20px;
-        }
-        /* 基础颜色，放在最后 */
-        ._dark {
-            color: #33373d;
-        }
-
-        ._gray {
-            color: #969ba3;
-        }
-
-        ._blue {
-            color: #4284ed;
-        }
-
-        ._green {
-            color: #7ed321;
-        }
-
-        ._orange {
-            color: #f0643a;
-        }
-
-        ._yellow {
-            color: #f0c53a;
-        }
-
-        ._purple {
-            color: #a091ff;
-        }
-
-        ._red {
-            color: #ed424b;
-        }
-
-        ._white {
-            color: #fff;
-        }
-
-        ._xs {
-            font-size: 12px;
-        }
-
-        ._sm {
-            font-size: 14px;
-        }
-
-        ._md {
-            font-size: 16px;
-        }
-
-        ._lg {
-            font-size: 18px;
-        }
-        #canvas{
-            position: fixed;
-        }
-        .player{
-            border: 1px solid #f5f5f5 !important;
-            box-shadow: none !important;
-        }
-        .icon-arrow {
-            display: inline-block;
-            width: 20px;
-            height: 1ex;
-            background: url(arrow-down.png) no-repeat center/15px; 
-        }
-    </style>
-        <head>
+    <link rel="stylesheet" href="/../css/common.css">
+    <head>
     <meta charset="utf-8">
     <!--
         © Material Theme
@@ -402,8 +56,7 @@ zh"
     <link rel="icon" href="/img/favicon.png">
 
     <meta name="format-detection" content="telephone=no"/>
-    <meta name="description" itemprop="description" content="
-Pixi.js是一款超快的开源HTML5 2D渲染引擎，使用带有Canvas回调功能的WebGL">
+    <meta name="description" itemprop="description" content="wodexiaowu">
     <meta name="keywords" content="技术 生活,javascript">
     <meta name="theme-color" content="#0097A7">
 
@@ -584,13 +237,12 @@ Pixi.js是一款超快的开源HTML5 2D渲染引擎，使用带有Canvas回调�
     <meta property="og:type" content="blog">
     <meta property="og:title" content="pixi | n顾盼神飞">
     <meta property="og:image" content="/img/favicon.png">
-    <meta property="og:description" content="
-Pixi.js是一款超快的开源HTML5 2D渲染引擎，使用带有Canvas回调功能的WebGL">
+    <meta property="og:description" content="wodexiaowu">
     <meta property="og:article:tag" content="javascript"> 
 
     
         <meta property="article:published_time" content="Thu May 31 2018 11:15:21 GMT+0800">
-        <meta property="article:modified_time" content="Fri Jun 15 2018 15:22:29 GMT+0800">
+        <meta property="article:modified_time" content="Thu Jul 05 2018 14:25:38 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -613,10 +265,10 @@ Pixi.js是一款超快的开源HTML5 2D渲染引擎，使用带有Canvas回调�
     "mainEntityOfPage": "https://627235655.github.io/2018/05/31/pixi/index.html",
     "headline": "pixi",
     "datePublished": "Thu May 31 2018 11:15:21 GMT+0800",
-    "dateModified": "Fri Jun 15 2018 15:22:29 GMT+0800",
+    "dateModified": "Thu Jul 05 2018 14:25:38 GMT+0800",
     "author": {
         "@type": "Person",
-        "name": "zongyuan.ning",
+        "name": "zongyuan",
         "image": {
             "@type": "ImageObject",
             "url": "/img/head.png"
@@ -632,8 +284,7 @@ Pixi.js是一款超快的开源HTML5 2D渲染引擎，使用带有Canvas回调�
         }
     },
     "keywords": ",javascript技术 生活",
-    "description": "
-Pixi.js是一款超快的开源HTML5 2D渲染引擎，使用带有Canvas回调功能的WebGL",
+    "description": "wodexiaowu",
 }
 </script>
 
@@ -650,26 +301,30 @@ Pixi.js是一款超快的开源HTML5 2D渲染引擎，使用带有Canvas回调�
 
 </head>
 
+    
+    <body id="scheme-Paradox" class="lazy">
+        <canvas id="canvas"></canvas>
+        <!-- <div class="waifu">
+            <div class="waifu-tips"></div>
+            <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+        </div> -->
+        <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
         
-        <body id="scheme-Paradox" class="lazy">
-            <canvas id="canvas"></canvas>
-            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
-            
-            <!-- Main Container -->
-                <main class="material-layout__content" id="main">
-                    <ul class="md-links">
-                        
-                    </ul>
+        <!-- Main Container -->
+            <main class="material-layout__content" id="main">
+                <ul class="md-links">
+                    
+                </ul>
 
-                    <!-- Top Anchor -->
-                    <div id="top"></div>
-                        
-                            <!-- Hamburger Button -->
-                            <button class="MD-burger-icon sidebar-toggle">
-                                <span id="MD-burger-id" class="MD-burger-layer"></span>
-                            </button>
-                        
-                        <!-- Post TOC -->
+                <!-- Top Anchor -->
+                <div id="top"></div>
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+                    <!-- Post TOC -->
 
     
     <!-- Back Button -->
@@ -731,7 +386,7 @@ Pixi.js是一款超快的开源HTML5 2D渲染引擎，使用带有Canvas回调�
     <!-- Author Name & Date -->
     <div>
         <strong>
-            zongyuan.ning
+            zongyuan
         </strong>
         <span>
             5月 31, 2018
@@ -799,7 +454,7 @@ Pixi.js是一款超快的开源HTML5 2D渲染引擎，使用带有Canvas回调�
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=pixi&url=https://627235655.github.io/2018/05/31/pixi/index.html&via=zongyuan.ning" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=pixi&url=https://627235655.github.io/2018/05/31/pixi/index.html&via=zongyuan" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -843,7 +498,7 @@ Pixi.js是一款超快的开源HTML5 2D渲染引擎，使用带有Canvas回调�
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <blockquote>
-<p>Pixi.js是一款超快的开源HTML5 2D渲染引擎，使用带有Canvas回调功能的WebGL<br><a id="more"></a></p>
+<p>Pixi.js是一款超快的开源HTML5 2D渲染引擎，使用带有Canvas回调功能的WebGL</p>
 </blockquote>
 
         
@@ -903,8 +558,8 @@ Pixi.js是一款超快的开源HTML5 2D渲染引擎，使用带有Canvas回调�
     </div>
 
 
-                        
-                            <!-- Overlay For Active Sidebar -->
+                    
+                        <!-- Overlay For Active Sidebar -->
 <div class="sidebar-overlay"></div>
 
 <!-- Material sidebar -->
@@ -926,7 +581,7 @@ Pixi.js是一款超快的开源HTML5 2D渲染引擎，使用带有Canvas回调�
 
     <!-- Sidebar Avatar -->
     <div class="sidebar-image">
-        <img src="/img/head.png" alt="zongyuan.ning's avatar">
+        <img src="/img/head.png" alt="zongyuan's avatar">
     </div>
 
     <!-- Sidebar Email -->
@@ -980,7 +635,7 @@ Pixi.js是一款超快的开源HTML5 2D渲染引擎，使用带有Canvas回调�
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">5</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">5</span></a>
             </ul>
         </li>
         
@@ -999,7 +654,7 @@ Pixi.js是一款超快的开源HTML5 2D渲染引擎，使用带有Canvas回调�
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/写作/">写作<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/技术/">技术<span class="sidebar_archives-count">8</span></a>
+                <a class="sidebar_archives-link" href="/categories/写作/">写作<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/技术/">技术<span class="sidebar_archives-count">9</span></a>
             </ul>
         </li>
         
@@ -1013,12 +668,12 @@ Pixi.js是一款超快的开源HTML5 2D渲染引擎，使用带有Canvas回调�
                     <i class="material-icons sidebar-material-icons">style</i>
                 
                 标签
-                <span class="_xs f-light">【5】</span>
+                <span class="_xs f-light">【6】</span>
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/tags/css/">css<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/tags/hexo/">hexo<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/tags/javascript/">javascript<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/tags/markdown/">markdown<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/tags/sublime/">sublime<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/tags/css/">css<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/tags/hexo/">hexo<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/tags/html/">html<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/tags/javascript/">javascript<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/tags/markdown/">markdown<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -1062,7 +717,7 @@ Pixi.js是一款超快的开源HTML5 2D渲染引擎，使用带有Canvas回调�
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">9</span>
+                <span class="sidebar-badge">10</span>
             </a>
         </li>
         
@@ -1114,17 +769,17 @@ It will not impact the appearance and can give developers a lot of support :)
 
 </aside>
 
+                            
                                 
-                                    
-                                        <!-- Footer Top Button -->
-                                        <div id="back-to-top" class="toTop-wrap">
+                                    <!-- Footer Top Button -->
+                                    <div id="back-to-top" class="toTop-wrap">
     <a href="#top" class="toTop">
         <i class="material-icons footer_top-i">expand_less</i>
     </a>
 </div>
 
-                                            
-                                                <!--Footer-->
+                                        
+                                            <!--Footer-->
 <footer class="mdl-mini-footer" id="bottom">
     
         <!-- Paradox Footer Left Section -->
@@ -1210,7 +865,7 @@ It will not impact the appearance and can give developers a lot of support :)
     
 </footer>
 
-                                                    <!-- Import JS File -->
+                                                <!-- Import JS File -->
 
     <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
 
@@ -1332,171 +987,15 @@ It will not impact the appearance and can give developers a lot of support :)
 console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
 </script>
 
-                </main>
-            </div>
-<script type="text/javascript">
-    // util
-    // 获取随机数字
-    function getRandomNum(max = 1) {
-        return Math.floor(Math.random() * max);
-    }
-
-    // 获取随机颜色
-    function getRandomRGB(opacity = 1) {
-        return 'rgba('+(Math.random() * 255)+','+(Math.random() * 255)+','+(Math.random() * 255)+',' + opacity+')';
-    }
-
-    // 气泡
-    let fnTextPopup = function() {
-        // 主逻辑
-        document.documentElement.addEventListener('click', function(event) {
-            let x = event.pageX,
-                y = event.pageY;
-
-            let eleText = document.createElement('i');
-            eleText.className = 'text-popup material-icons sidebar-material-icons';
-            eleText.innerHTML = 'favorite'
-            this.appendChild(eleText);
-            // 生成颜色
-            eleText.style.color = getRandomRGB(Math.random());
-            // 位置
-            eleText.style.left = (x - eleText.clientWidth / 2) + 'px';
-            eleText.style.top = (y - eleText.clientHeight) + 'px';
-            // 动画结束后删除自己
-            eleText.addEventListener('animationend', function() {
-                eleText.parentNode.removeChild(eleText);
-            });
-        });
-    };
-    fnTextPopup();
-
-
-
-    // canvas 连线
-    class Circle {
-        //创建对象
-        //以一个圆为对象
-        //设置随机的 x，y坐标，r半径，_mx，_my移动的距离
-        //this.r是创建圆的半径，参数越大半径越大
-        //this._mx,this._my是移动的距离，参数越大移动
-        constructor(x, y) {
-            this.x = x;
-            this.y = y;
-            this.r = Math.random() * 2 ;
-            this.speed = 1;
-            this._mx = Math.random() *  this.speed;
-            this._my = Math.random() * this.speed;
-            this.move_type = Math.random() > 0.5 ? false : true;
-            this.color = '#fff';//'rgba('+(Math.random() * 255)+','+(Math.random() * 255)+','+(Math.random() * 255)+')';
-
-        }
-
-        //canvas 画圆和画直线
-        //画圆就是正常的用canvas画一个圆
-        //画直线是两个圆连线，为了避免直线过多，给圆圈距离设置了一个值，距离很远的圆圈，就不做连线处理
-        drawCircle(ctx) {
-            ctx.beginPath();
-            //arc() 方法使用一个中心点和半径，为一个画布的当前子路径添加一条弧。
-            ctx.arc(this.x, this.y, this.r, 0, 360)
-            ctx.closePath();
-            ctx.fillStyle = this.color;//'rgba(255, 255, 255, 1)';
-            ctx.fill();
-        }
-
-        // drawLine(ctx, _circle) {
-        //     let dx = this.x - _circle.x;
-        //     let dy = this.y - _circle.y;
-        //     let d = Math.sqrt(dx * dx + dy * dy)
-        //     if (d < 150) {
-        //         ctx.beginPath();
-        //         //开始一条路径，移动到位置 this.x,this.y。创建到达位置 _circle.x,_circle.y 的一条线：
-        //         ctx.moveTo(this.x, this.y);   //起始点
-        //         ctx.lineTo(_circle.x, _circle.y);   //终点
-        //         ctx.closePath();
-        //         ctx.lineWidth = 0.1;
-        //         ctx.strokeStyle = 'rgba(255, 255, 255, 0)';
-        //         ctx.stroke();
-        //     }
-        // }
-
-        // 圆圈移动
-        // 圆圈移动的距离必须在屏幕范围内
-        move(w, h) {
-            this._mx = (this.x < w && this.x > 0) ? this._mx : (-this._mx);
-            this._my = (this.y < h && this.y > 0) ? this._my : (-this._my);
-            this.x =  this.move_type  ? (this.x + this._mx) : (this.x - this._mx);
-            this.y = this.move_type  ? (this.y + this._my) : (this.y - this._my);
-        }
-    }
-    //鼠标点画圆闪烁变动
-    // class currentCirle extends Circle {
-    //     constructor(x, y) {
-    //         super(x, y)
-    //     }
-
-    //     drawCircle(ctx) {
-    //         ctx.beginPath();
-    //         //注释内容为鼠标焦点的地方圆圈半径变化
-    //         this.r = (this.r < 14 && this.r > 1) ? this.r + (Math.random() * 2 - 1) : 2;
-    //         // this.r = 5;
-    //         ctx.arc(this.x, this.y, this.r, 0, 360);
-    //         ctx.closePath();
-    //         ctx.fillStyle = 'rgba(0,0,0,' + (parseInt(Math.random() * 100) / 100) + ')'
-    //         // ctx.fillStyle = '#fff'
-    //         ctx.fill();
-
-    //     }
-    // }
-    //更新页面用requestAnimationFrame替代setTimeout
-    window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-
-    let canvas = document.getElementById('canvas');
-    let ctx = canvas.getContext('2d');
-    let w = canvas.width =  document.documentElement.clientWidth;//canvas.offsetWidth;
-    let h = canvas.height = document.documentElement.clientHeight;//canvas.offsetHeight;
-    let circles = [];
-    // let current_circle = new currentCirle(0, 0)
-
-    let draw = function () {
-        ctx.clearRect(0, 0, w, h);
-        for (let i = 0; i < circles.length; i++) {
-            circles[i].move(w, h);
-            circles[i].drawCircle(ctx);
-            for (j = i + 1; j < circles.length; j++) {
-                // circles[i].drawLine(ctx, circles[j])
-            }
-        }
-        // if (current_circle.x) {
-        //     current_circle.drawCircle(ctx);
-        //     for (var k = 1; k < circles.length; k++) {
-        //         // current_circle.drawLine(ctx, circles[k])
-        //     }
-        // }
-        requestAnimationFrame(draw)
-    }
-
-    let init = function (num) {
-        for (var i = 0; i < num; i++) {
-            circles.push(new Circle(Math.random() * w, Math.random() * h));
-        }
-        draw();
-    }
-    window.addEventListener('load', init(300));
-    // window.onmousemove = function (e) {
-    //     e = e || window.event;
-    //     current_circle.x = e.clientX;
-    //     current_circle.y = e.clientY;
-    // }
-    // window.onclick = function (e) {
-    //     e = e || window.event;
-    //     // current_circle.x = e.clientX;
-    //     // current_circle.y = e.clientY;
-    // }
-    // window.onmouseout = function () {
-    //     current_circle.x = null;
-    //     current_circle.y = null;
-    // };
-</script>
-</body>
+            </main>
+        </div>
+    <script src="/../js/util.js"></script>
+    <!-- <script async src="../js/waifu-tips.js"></script>
+    <script src="../js/live2d.js"></script>
+    <script type="text/javascript">
+        loadlive2d("live2d", "https://cdn.jsdelivr.net/npm/live2d-widget-model-tororo@1.0.5/assets/tororo.model.json");
+        // loadlive2d("live2d", "../js/model.json");
+    </script> -->
+    </body>
 
 </html>
