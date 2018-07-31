@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[svg和canvas及css3动画研究]]></title>
+    <url>%2F2018%2F07%2F05%2Fsvg-and-canvas%2F</url>
+    <content type="text"><![CDATA[简介svg指可缩放矢量图形是基于可扩展标记语言（标准通用标记语言的子集），用于描述二维矢量图形的一种图形格式。在 2003 年一月，SVG 1.1 被确立为 W3C 标准。 canvas指在HTML5中新增的标签用于在网页实时生成图像，并且可以操作图像内容，基本上它是一个可以用JavaScript操作的位图（bitmap）。2014年10月29日，万维网联盟宣布，经过接近8年的艰苦努力，该标准规范终于制定完成。 能做什么？svg点、线、圆弧、矩形、正方形、圆、路径、图像 canvas点、线、圆弧、矩形、正方形、圆、路径、图像 优缺点svg不依赖分辨率支持事件处理器最适合带有大型渲染区域的应用程序（比如谷歌地图）复杂度高会减慢渲染速度（任何过度使用 DOM 的应用都不快）不适合游戏应用生成的是矢量图。SVG的本质特征，或者称为立世之本就是矢量可缩放（如论如何缩放，图像边缘都是平滑的） svg较gif、jpeg的优势任意放缩文本独立较小文件超强显示效果超级颜色控制交互X和智能化 canvas依赖分辨率不支持事件处理器弱的文本渲染能力能够以 .png 或 .jpg 格式保存结果图像最适合图像密集型的游戏，其中的许多对象会被频繁重绘生成的是标量图。 知识svgcanvas1、canvas宽高默认为300px和150px，因为其是置换元素，svg亦是。canvas高度宽度默认单位就是px,不论是height=80,height=80px,height=80em,最终都渲染为80px,若是不合法或不设置的就解析为默认值，即150px.2、CSS的width,height属性权重要大于&lt;canvas&gt;元素的width,height属性权重，即样式大于html属性。3、&lt;canvas&gt;的等比例特性是强制的，300*150对应100*50。4、Canvas绘制与CSS尺寸无关。以上细节见canvas HTML属性尺寸和CSS尺寸多个细节深入 应用svg1、借助SVG文字尺寸自动缩放甚至突破Chrome 12px限制html代码： &lt;div id=&quot;svg_wrap_1&quot;&gt; &lt;svg viewBox=&quot;0 0 600 80&quot; id=&quot;svg_1&quot;&gt; &lt;text font-family=&quot;&apos;PingFang SC&apos;,&apos;Microsoft Yahei&apos;&quot; font-size=&quot;60&quot; x=&quot;0&quot; y=&quot;1em&quot;&gt;CSS世界这本书不错！&lt;/text&gt; &lt;/svg&gt; &lt;/div&gt; css代码： #svg_wrap_1{ width: 400px; padding: 10px 20px; margin: 20px auto 0; border: 1px solid #f5f5f5; resize: both; overflow:auto; svg{ width: 100%; height: 100%; } } 知识点：viewBox=&quot;x, y, width, height&quot; // x:左上角横坐标，y:左上角纵坐标，width:宽度，height:高度具体细节见：理解SVG viewport,viewBox,preserveAspectRatio缩放 2、制作图标适用于场景：一些需要尺寸自适应的slogon内容就很实用，例如移动端320~414宽度间的自适应。 canvas1、使用canvas实现和HTML5 video交互的弹幕效果动画补间动画 所谓补间动画又叫做中间帧动画，渐变动画，只要建立起始和结束的画面，中间部分由软件自动生成，省去了中间动画制作的复杂过程 在触屏页面中，常见的实现补间动画以下几种形式： 第一，CSS3 Animation。通过animation(除steps()以外的时间函数)属性在每个关键帧之间插入补间动画。第二，CSS3 Transition。区别于animation，transition只能设定初始和结束时刻的两个关键帧状态。第三，利用JavaScript实现动画，例如JavaScript动画库或框架，著名的TweenJS，它是CreateJS的其中一个套件。另外，在Flash业界久负盛名的GreenSock推出的GSAP(GreenSock Animation Platform)也新引入了对Javascript动画的支持。第四，SVG 动画。基于移动端对SVG技术的友好的支持性，利用SVG技术实现动画也是一种可行的方案。 tips:动画要自然不生硬，十二法则你值得拥有 逐帧动画 定格动画，又名逐帧动画，是一种动画技术，其原理即将每帧不同的图像连续播放，从而产生动画效果。 两个条件：（1）相关联的不同图像，即动画帧；（2）连续播放。三种技术（视频可以实现所有类型的动画，暂不纳入）：gif、JavaScript、CSS3 Animation。 gif优点：成本较低、使用方便。缺点：画质上，gif 支持颜色少(最大256色)、Alpha 透明度支持差，图像锯齿毛边比较严重；交互上，不能直接控制播放、暂停、播放次数，灵活性差；性能上，gif 会引起页面周期性的 paint ，性能较差。 JSJS 与 CSS3，一般是将动画帧放到背景图中。不同的是， JS 是使用脚本来控制动画的连续播放的：可以直接改变元素的 background-image也可以将动画帧合并成雪碧图，通过改变 background-position 来实现优点:是兼容性佳，交互灵活。 CSS3 Animation也可以将动画帧合并成雪碧图，通过改变 background-position 来实现CSS3 实际上是使用 animation-timing-function 的阶梯函数 steps(number_of_steps, direction) 来实现逐帧动画的连续播放的。 在移动端，CSS3 Animation 兼容性良好，相对于 JS，CSS3 逐帧动画使用简单，且效率更高，因为许多优化都在浏览器底层完成。 3D动画]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>svg</tag>
+        <tag>canvas</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[网页无障碍访问知识集]]></title>
     <url>%2F2018%2F06%2F21%2Faccessibility-web%2F</url>
     <content type="text"><![CDATA[WAI-ARIA指无障碍网页应用。主要针对的是视觉缺陷，失聪，行动不便的残疾人以及假装残疾的测试人员。 ARIA常用属性role=&#39;button&#39;表示按钮所以平时最好不能用div和span来模拟按钮，因为会失去键盘可访问性如若要 则需要加上role=&#39;button&#39;，tabindex=0aria-hidden字符串。可选值为true和false, true表示元素隐藏(不可见)，false表示元素可见aria-expanded 展开还是收起，菜单，自定义下拉等用的比较多。aria-checked 选中还是未选。aria-selected 选中还是未选。aria-disabled 禁用还是可用。aria-invalid 验证正确还是错误。其余属性可见张大大的博客]]></content>
@@ -47,23 +60,12 @@
   <entry>
     <title><![CDATA[css-tips]]></title>
     <url>%2F2018%2F06%2F08%2Fcss-tips%2F</url>
-    <content type="text"><![CDATA[常用的一些css小技巧，收录中… tips1:改变滚动条样式/*滚动条样式*/ .scrollbar::-webkit-scrollbar {/*滚动条整体样式*/ width: 4px; /*高宽分别对应横竖滚动条的尺寸*/ height: 4px; } .scrollbar::-webkit-scrollbar-thumb {/*滚动条里面小方块*/ border-radius: 5px; -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2); background: rgba(0,0,0,0.2); } .scrollbar::-webkit-scrollbar-track {/*滚动条里面轨道*/ -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2); border-radius: 0; background: rgba(0,0,0,0.1); } tips2:超出2行显示省略号….elis-2{ overflow:hidden; //超出的文本隐藏 text-overflow:ellipsis; //溢出用省略号显示 display:-webkit-box; //将对象作为弹性伸缩盒子模型显示。 -webkit-box-orient:vertical; //从上到下垂直排列子元素（设置伸缩盒子的子元素排列方式） -webkit-line-clamp:2; //这个属性不是css的规范属性，需要组合上面两个属性，表示显示的行数。 } tips3:content换行技术实现loading点点点效果html代码: 上传中&lt;dot&gt;...&lt;/dot&gt; css代码： dot { display: inline-block; height: 1em; line-height: 1; text-align: left; vertical-align: -.25em; overflow: hidden; } dot::before { display: block; content: &apos;...\A..\A.&apos;; white-space: pre-wrap; /* 也可以是white-space: pre */ animation: dot 3s infinite step-start both; } @keyframes dot { 33% { transform: translateY(-2em); } 66% { transform: translateY(-1em); } } 个人感觉关键还是在于animation中的step属性,能实现分段动画的效果。实例： 上传中… tips4:css中的单位pxpx为绝对单位，即基于物理像素的单位。 emem为相对单位，指的是基于当前元素的字体大小的单位。比如元素font-size:10px，那么10em等于100px。 remrem也是相对单位，指的是基于根元素(html)字体大小的单位。比如根元素font-size:10px，那么10rem等于100px。主要应用于移动端的尺寸自适应布局。 excss中的一个相对单位，指的是字母x的高度，即x-height，而x的高度会受字体的影响。应用：不受字体和字号影响的内联元素的垂直居中对齐效果原理：内联元素默认是基线对齐，而基线就是x的底部，1ex就是一个x的高度，此时我们设置图标的大小为1ex，图标内背景图居中，文字与图标则可以水平垂直居中。css代码： .icon-arrow { display: inline-block; width: 20px; height: 1ex; background: url(arrow-down.png) no-repeat center; } 实例： 水平垂直居中图标 css-tipscss3实现：display: flex; align-items: center;##### ch也是一个相对单位，1ch 表示一个 0 字符的宽度，所以 6 个 0 所占据的宽度就是 6ch。应用的话，主要是配合等宽字体。##### tips5:css画三角形的几种方式###### 1、border实现这个应该属于基本操作了，直接上代码css代码: .border-triangle{ width: 0; height: 0; border: 10px solid; border-color: #0081fe transparent transparent transparent; // 注意你想要那个朝向的三角形，则只需写与之相反方向的颜色即可 }###### 2、clip-path polygon图形构建css代码: .clip-triangle{ display: inline-block; width: 20px; height: 20px; background-color: currentColor; clip-path: polygon(5px 10px, 16px 3px, 16px 17px); }以上所有三角形实例： border-triangle clip-triangle]]></content>
+    <content type="text"><![CDATA[常用的一些css小技巧，收录中… tips1:改变滚动条样式/*滚动条样式*/ .scrollbar::-webkit-scrollbar {/*滚动条整体样式*/ width: 4px; /*高宽分别对应横竖滚动条的尺寸*/ height: 4px; } .scrollbar::-webkit-scrollbar-thumb {/*滚动条里面小方块*/ border-radius: 5px; -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2); background: rgba(0,0,0,0.2); } .scrollbar::-webkit-scrollbar-track {/*滚动条里面轨道*/ -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2); border-radius: 0; background: rgba(0,0,0,0.1); } tips2:超出2行显示省略号….elis-2{ overflow:hidden; //超出的文本隐藏 text-overflow:ellipsis; //溢出用省略号显示 display:-webkit-box; //将对象作为弹性伸缩盒子模型显示。 -webkit-box-orient:vertical; //从上到下垂直排列子元素（设置伸缩盒子的子元素排列方式） -webkit-line-clamp:2; //这个属性不是css的规范属性，需要组合上面两个属性，表示显示的行数。 } tips3:content换行技术实现loading点点点效果html代码: 上传中&lt;dot&gt;...&lt;/dot&gt; css代码： dot { display: inline-block; height: 1em; line-height: 1; text-align: left; vertical-align: -.25em; overflow: hidden; } dot::before { display: block; content: &apos;...\A..\A.&apos;; white-space: pre-wrap; /* 也可以是white-space: pre */ animation: dot 3s infinite step-start both; } @keyframes dot { 33% { transform: translateY(-2em); } 66% { transform: translateY(-1em); } } 个人感觉关键还是在于animation中的step属性,能实现分段动画的效果。实例： 上传中… tips4:css中的单位 单位 含义 em 相对于父元素的字体大小 ex 相对于小写字母”x”的高度 px 相对于屏幕分辨率而不是视窗大小：通常为1个点或1/72英寸 in inch, 表英寸 cm centimeter, 表厘米 mm millimeter, 表毫米 pt 1/72英寸 pc 12点活字，或1/12点 % 相对于父元素。正常情况下是通过属性定义自身或其他元素 pxpx为绝对单位，即基于物理像素的单位。 emem为相对单位，指的是基于当前元素的字体大小的单位。比如元素font-size:10px，那么10em等于100px。 remrem也是相对单位，指的是基于根元素(html)字体大小的单位。比如根元素font-size:10px，那么10rem等于100px。主要应用于移动端的尺寸自适应布局。 excss中的一个相对单位，指的是字母x的高度，即x-height，而x的高度会受字体的影响。应用：不受字体和字号影响的内联元素的垂直居中对齐效果原理：内联元素默认是基线对齐，而基线就是x的底部，1ex就是一个x的高度，此时我们设置图标的大小为1ex，图标内背景图居中，文字与图标则可以水平垂直居中。css代码： .icon-arrow { display: inline-block; width: 20px; height: 1ex; background: url(arrow-down.png) no-repeat center; } 实例： 水平垂直居中图标 css-tipscss3实现：display: flex; align-items: center;##### ch也是一个相对单位，1ch 表示一个 0 字符的宽度，所以 6 个 0 所占据的宽度就是 6ch。应用的话，主要是配合等宽字体。##### tips5:css画三角形的几种方式###### 1、border实现这个应该属于基本操作了，直接上代码css代码: .border-triangle{ width: 0; height: 0; border: 10px solid; border-color: #0081fe transparent transparent transparent; // 注意你想要那个朝向的三角形，则只需写与之相反方向的颜色即可 }###### 2、clip-path polygon图形构建css代码: .clip-triangle{ display: inline-block; width: 20px; height: 20px; background-color: currentColor; clip-path: polygon(5px 10px, 16px 3px, 16px 17px); }以上所有三角形实例： border-triangle clip-triangle 字体定义顺序字体定义顺序是一门学问，通常而言，我们定义字体的时候，会定义多个字体或字体系列。举个栗子： body { font-family: tahoma, arial, &apos;Hiragino Sans GB&apos;, &apos;\5b8b\4f53&apos;, sans-serif; } 别看短短 5 个字体名，其实其中门道很深。解释一下： 使用 tahoma 作为首选的西文字体，小字号下结构清晰端整、阅读辨识容易；用户电脑未预装 tohoma，则选择 arial 作为替代的西文字体，覆盖 windows 和 MAC OS；Hiragino Sans GB 为冬青黑体，首选的中文字体，保证了 MAC 用户的观看体验；Windows 下没有预装冬青黑体，则使用 ‘\5b8b\4f53‘ 宋体为替代的中文字体方案，小字号下有着不错的效果；最后使用无衬线系列字体 sans-serif 结尾，保证旧版本操作系统用户能选中一款电脑预装的无衬线字体，向下兼容。]]></content>
       <categories>
         <category>技术</category>
       </categories>
       <tags>
         <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[pixi]]></title>
-    <url>%2F2018%2F05%2F31%2Fpixi%2F</url>
-    <content type="text"><![CDATA[Pixi.js是一款超快的开源HTML5 2D渲染引擎，使用带有Canvas回调功能的WebGL]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>javascript</tag>
       </tags>
   </entry>
   <entry>
@@ -75,6 +77,17 @@
       </categories>
       <tags>
         <tag>sublime</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[pixi]]></title>
+    <url>%2F2018%2F05%2F31%2Fpixi%2F</url>
+    <content type="text"><![CDATA[Pixi.js是一款超快的开源HTML5 2D渲染引擎，使用带有Canvas回调功能的WebGL]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
       </tags>
   </entry>
   <entry>
