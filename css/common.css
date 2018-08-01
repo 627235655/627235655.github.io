@@ -67,7 +67,7 @@
     border-bottom: none!important;
 }
 .starry-theme code,
-.starry-theme blockquote,
+.starry-theme blockquote
  {
     color: #fff !important;
     background: rgba(255,255,255,.4) !important;
