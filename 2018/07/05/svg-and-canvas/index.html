@@ -244,7 +244,7 @@ zh"
 
     
         <meta property="article:published_time" content="Thu Jul 05 2018 16:45:28 GMT+0800">
-        <meta property="article:modified_time" content="Tue Aug 14 2018 11:07:05 GMT+0800">
+        <meta property="article:modified_time" content="Tue Aug 14 2018 14:27:01 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -267,7 +267,7 @@ zh"
     "mainEntityOfPage": "https://627235655.github.io/2018/07/05/svg-and-canvas/index.html",
     "headline": "svg和canvas及css3动画研究",
     "datePublished": "Thu Jul 05 2018 16:45:28 GMT+0800",
-    "dateModified": "Tue Aug 14 2018 11:07:05 GMT+0800",
+    "dateModified": "Tue Aug 14 2018 14:27:01 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "zongyuan",
@@ -410,7 +410,7 @@ zh"
         </strong>
         <span>
             7月 05, 2018
-            <span class="m-l-md">【字数：3,447】</span>
+            <span class="m-l-md">【字数：3,536】</span>
             <span  class="m-l-md">【阅读时长：13min】</span>
         </span>
     </div>
@@ -615,7 +615,22 @@ fill=&quot;freeze&quot; /&gt;
 <h5 id="canvas"><a href="#canvas" class="headerlink" title="canvas"></a>canvas</h5><ul>
 <li>指在HTML5中新增的标签用于在网页实时生成图像，并且可以操作图像内容，基本上它是一个可以用JavaScript操作的位图（bitmap）。<br>2014年10月29日，万维网联盟宣布，经过接近8年的艰苦努力，该标准规范终于制定完成。</li>
 </ul>
-<h4 id="能做什么？"><a href="#能做什么？" class="headerlink" title="能做什么？"></a>能做什么？</h4><h5 id="svg-【查看demo】"><a href="#svg-【查看demo】" class="headerlink" title="svg 【查看demo】"></a>svg <a href="http://localhost:8081/html/svgs.html#svg" target="_blank" rel="noopener">【查看demo】</a></h5><p>矩形 <code>&lt;rect&gt;</code></p>
+<h4 id="能做什么？"><a href="#能做什么？" class="headerlink" title="能做什么？"></a>能做什么？</h4><h5 id="svg-【查看demo】"><a href="#svg-【查看demo】" class="headerlink" title="svg 【查看demo】"></a>svg <a href="http://localhost:8081/html/svgs.html#svg" target="_blank" rel="noopener">【查看demo】</a></h5><ul>
+<li>SVG 文件可以直接插入网页，成为 DOM 的一部分，然后用 JavaScript 和 CSS 进行操作。<pre><code>&lt;svg width=&quot;200&quot; height=&quot;200&quot;&gt;
+    &lt;rect x=&quot;50&quot; y=&quot;25&quot; width=&quot;100&quot; height=&quot;50&quot; fill=&quot;#4284ed&quot;&gt;&lt;/rect&gt;
+&lt;/svg&gt;
+</code></pre></li>
+<li>SVG 代码也可以写在一个独立文件中，然后用<code>&lt;img&gt;</code>、<code>&lt;object&gt;</code>、<code>&lt;embed&gt;</code>、<code>&lt;iframe&gt;</code>等标签插入网页。<pre><code>&lt;img src=&quot;circle.svg&quot;&gt;
+&lt;object id=&quot;object&quot; data=&quot;circle.svg&quot; type=&quot;image/svg+xml&quot;&gt;&lt;/object&gt;
+&lt;embed id=&quot;embed&quot; src=&quot;icon.svg&quot; type=&quot;image/svg+xml&quot;&gt;
+&lt;iframe id=&quot;iframe&quot; src=&quot;icon.svg&quot;&gt;&lt;/iframe&gt;
+</code></pre></li>
+<li>CSS 也可以使用 SVG 文件。<pre><code>background: url(icon.svg);
+</code></pre></li>
+<li>SVG 文件还可以转为 BASE64 编码，然后作为 Data URI 写入网页。<pre><code>&lt;img src=&quot;data:image/svg+xml;base64,[data]&quot;&gt;
+</code></pre></li>
+</ul>
+<p>矩形 <code>&lt;rect&gt;</code></p>
 <ul>
 <li>x 属性定义矩形的左侧位置（例如，x=”0” 定义矩形到浏览器窗口左侧的距离是 0px）</li>
 <li>y 属性定义矩形的顶端位置（例如，y=”0” 定义矩形到浏览器窗口顶端的距离是 0px）</li>
@@ -658,9 +673,7 @@ fill=&quot;freeze&quot; /&gt;
 <li>A = elliptical Arc</li>
 <li>Z = closepath</li>
 </ul>
-<blockquote>
-<p>注意：以上所有命令均允许小写字母。大写表示绝对定位，小写表示相对定位。</p>
-</blockquote>
+<!-- >注意：以上所有命令均允许小写字母。大写表示绝对定位，小写表示相对定位。 -->
 <p>图片 <code>&lt;image&gt;</code></p>
 <ul>
 <li>x=”图像的左上角的x轴坐标”</li>
@@ -678,9 +691,7 @@ fill=&quot;freeze&quot; /&gt;
 <li>stroke-dasharray</li>
 <li>fill</li>
 </ul>
-<blockquote>
-<p>所有stroke属性，可应用于任何种类的线条，文字和元素就像一个圆的轮廓。</p>
-</blockquote>
+<!-- >所有stroke属性，可应用于任何种类的线条，文字和元素就像一个圆的轮廓。 -->
 <p>样式<css></css></p>
 <ul>
 <li>style 属性用来定义 CSS 属性</li>
@@ -1038,7 +1049,7 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 <div id="music163player" style="margin-top: 50px;">
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=29087154&auto=1&height=66"></iframe>
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=730810&auto=1&height=66"></iframe>
 </div>
 
 <!-- Sidebar Divider -->
