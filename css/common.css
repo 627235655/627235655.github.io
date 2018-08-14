@@ -7,12 +7,17 @@
 .starry-theme .mdl-mini-footer{
     color: rgba(255,255,255,.9) !important;
 }
+.starry-theme img{
+    max-height: 400px;
+    margin: 10px auto !important;
+    background: #fff !important;
+}
 .starry-theme .mdl-mini-footer--right-section a{
     color: #6FC1EA !important;
 }
 .starry-theme .material-layout .material-index>.material-nav,
 .starry-theme .material-layout .material-post>.material-nav{
-    margin: 0 !important;
+    margin: 8px !important;
 }
 .starry-theme a{
     text-decoration: none !important;
@@ -47,7 +52,8 @@
 .starry-theme .mdl-color-text--grey-700,
 .starry-theme .material-layout .material-post>.material-nav,
 .starry-theme .material-layout .material-index>.material-nav,
-.starry-theme .material-nav a{
+.starry-theme .material-nav a,
+.starry-theme h6{
     color: rgba(255,255,255,.9) !important;
 }
 .starry-theme .sidebar .sidebar-nav li:hover>a,
@@ -73,6 +79,10 @@
     background: rgba(255,255,255,.4) !important;
     border-radius: 2px !important;
 }
+.starry-theme pre code{
+    background: transparent !important;
+}
+
 .starry-theme .social-btn
 {
     background-color: #fff !important;
@@ -87,7 +97,7 @@
 .starry-theme .linenums li.L7,
 .starry-theme .linenums li.L8,
 .starry-theme .linenums li.L9 {
-    background: rgba(255,255,255,.4) !important;
+    background: transparent !important;
 }
 .starry-theme blockquote{
     padding: 5px 15px !important;
@@ -95,7 +105,7 @@
 
 .starry-theme pre,
 .starry-theme linenums li {
-    background: rgba(255,255,255,.4) !important;
+    background: rgba(255,255,255,.75) !important;
 }
 .starry-theme #post-content .prettyprint{
     border-radius: 5px !important;
