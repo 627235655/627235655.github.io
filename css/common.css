@@ -167,6 +167,10 @@ code {
     animation: textPopup ease 1s;
 }
 
+p strong{
+    margin: 0 5px;
+}
+
 @keyframes textPopup {
     0%,
     100% {

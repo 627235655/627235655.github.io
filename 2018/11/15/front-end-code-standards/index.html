@@ -48,7 +48,7 @@ zh"
     
     <title>
         
-            正则表达式 | 
+            前端编码规范 | 
         
         n顾盼神飞
     </title>
@@ -59,7 +59,7 @@ zh"
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="wodexiaowu">
-    <meta name="keywords" content="技术 生活,regexp">
+    <meta name="keywords" content="技术 生活,编码规范">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -220,7 +220,7 @@ zh"
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="n顾盼神飞">
-    <meta name="msapplication-starturl" content="https://627235655.github.io/2018/07/05/regular-expression/">
+    <meta name="msapplication-starturl" content="https://627235655.github.io/2018/11/15/front-end-code-standards/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="n顾盼神飞">
@@ -235,16 +235,16 @@ zh"
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://627235655.github.io/2018/07/05/regular-expression/">
+    <meta property="og:url" content="https://627235655.github.io/2018/11/15/front-end-code-standards/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="正则表达式 | n顾盼神飞">
+    <meta property="og:title" content="前端编码规范 | n顾盼神飞">
     <meta property="og:image" content="/img/random/material-8.png">
     <meta property="og:description" content="wodexiaowu">
-    <meta property="og:article:tag" content="regexp"> 
+    <meta property="og:article:tag" content="编码规范"> 
 
     
-        <meta property="article:published_time" content="Thu Jul 05 2018 16:45:28 GMT+0800">
-        <meta property="article:modified_time" content="Thu Aug 16 2018 11:05:35 GMT+0800">
+        <meta property="article:published_time" content="Thu Nov 15 2018 16:01:58 GMT+0800">
+        <meta property="article:modified_time" content="Thu Nov 15 2018 18:03:05 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -252,7 +252,7 @@ zh"
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://627235655.github.io/2018/07/05/regular-expression/index.html" />
+        <link rel="canonical" href="https://627235655.github.io/2018/11/15/front-end-code-standards/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -264,10 +264,10 @@ zh"
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "https://627235655.github.io/2018/07/05/regular-expression/index.html",
-    "headline": "正则表达式",
-    "datePublished": "Thu Jul 05 2018 16:45:28 GMT+0800",
-    "dateModified": "Thu Aug 16 2018 11:05:35 GMT+0800",
+    "mainEntityOfPage": "https://627235655.github.io/2018/11/15/front-end-code-standards/index.html",
+    "headline": "前端编码规范",
+    "datePublished": "Thu Nov 15 2018 16:01:58 GMT+0800",
+    "dateModified": "Thu Nov 15 2018 18:03:05 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "zongyuan",
@@ -285,7 +285,7 @@ zh"
             "url": "/img/random/material-8.png"
         }
     },
-    "keywords": ",regexp技术 生活",
+    "keywords": ",编码规范技术 生活",
     "description": "wodexiaowu",
 }
 </script>
@@ -355,7 +355,7 @@ zh"
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#能干嘛"><span class="post-toc-number">1.</span> <span class="post-toc-text">能干嘛</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#构造函数"><span class="post-toc-number">2.</span> <span class="post-toc-text">构造函数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#用法及API"><span class="post-toc-number">3.</span> <span class="post-toc-text">用法及API</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#String的匹配方法"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">String的匹配方法</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#RegExp的方法"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">RegExp的方法</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#命名"><span class="post-toc-number">1.</span> <span class="post-toc-text">命名</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#命名的含义"><span class="post-toc-number">2.</span> <span class="post-toc-text">命名的含义</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#函数传参"><span class="post-toc-number">3.</span> <span class="post-toc-text">函数传参</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#if-else-过多"><span class="post-toc-number">4.</span> <span class="post-toc-text">if else 过多</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#使用解构赋值"><span class="post-toc-number">5.</span> <span class="post-toc-text">使用解构赋值</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#CSS-的-BEM-命名"><span class="post-toc-number">6.</span> <span class="post-toc-text">CSS 的 BEM 命名</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#CSS-面向对象的命名-OOCSS"><span class="post-toc-number">7.</span> <span class="post-toc-text">CSS 面向对象的命名 OOCSS</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#CSS-基于属性的命名-Atomic-CSS"><span class="post-toc-number">8.</span> <span class="post-toc-text">CSS 基于属性的命名 Atomic CSS</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#CSS-的属性书写顺序"><span class="post-toc-number">9.</span> <span class="post-toc-text">CSS 的属性书写顺序</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#HTML"><span class="post-toc-number">10.</span> <span class="post-toc-text">HTML</span></a></li></ol>
     </ul>
     
 
@@ -387,7 +387,7 @@ zh"
         
     
             <p class="article-headline-p">
-                正则表达式
+                前端编码规范
             </p>
         </div>
 
@@ -409,8 +409,8 @@ zh"
             zongyuan
         </strong>
         <span>
-            7月 05, 2018
-            <span class="m-l-md">【字数：631】</span>
+            11月 15, 2018
+            <span class="m-l-md">【字数：754】</span>
             <span  class="m-l-md">【阅读时长：3min】</span>
         </span>
     </div>
@@ -433,7 +433,7 @@ zh"
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC0ElEQVR42u3aS24CMRAFQO5/abKNhDJ63fZEg7tYoQgGl7N46s/rPfL1wsbGxsbGxsbGxn4k+xW//vrW7798vi8c6/Jbn88vnxkbGxv7aHbvQMmlJFeTPL96rdjY2Ngz2flxe5jkL9dn650ZGxsbG7tXZlyXB0lpkV8BNjY2NvZKgEVlQKvwuP4kNjY2NnavQdOLt17jqVfAYGNjY89k50PT57z/1/k2NjY29oPZK4s1SUFSvdC9a0DY2NjYE9h5MFRhvQZTdfUzOSc2Njb2HPb1ACAB9Ia1vYgqN7awsbGxD2X3Bq55UFULjKQ4yX8XGxsbewI7X8dZb9Dn17reVMLGxsaew66WJXmJkqxI5lefL1yWcxsbGxv7CHavhbReWlTjamXci42NjX0qO3lQb5SbfLI67u2t/mBjY2Ofzb5GrgyAkzWavD3Ua11hY2NjT2AnrZn7Rr/5emUepYVNJWxsbOwj2Am+N16txlh1ESdvbGFjY2NPYK+XJfkoNzn0ehurXIFhY2Njfzk7b+JfR1E+Eqh+PnlOuZeGjY2NfRx7fZjaKySuY6waeH9eDTY2NvYA9vuG13ozKDln9F1sbGzsQ9lJGFSDp9fur55n284pNjY29hHsOxr6K2OG6iA5+i1sbGzsAewEVi0beoz16MLGxsaexm6OTqvFQHytvZFwYTyAjY2NfTS7FyHVZlAvxnoXhI2NjT2HnRck1dIlJ+0KLWxsbOyZ7JV2/15kNTij52NjY2Mfyt61TLmrOdVbu0xGF9jY2NinspthUGwM5WXD+vvmfBsbGxv7y9lJaOUBVl3uScLylgDDxsbGPo6dt/53BdXe5lEzwLCxsbGx42Fw9SKq59kw38bGxsYew84HwL12f9JyygcY2NjY2HPY+RGrF7H3yZsDDBsbG/sIdq8M2NvET9aAlv4B2NjY2Iey57ywsbGxsbGxsbGxH/P6AckGAZMwgzzRAAAAAElFTkSuQmCC">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC00lEQVR42u3aQW7DMBADwPz/0+21QJCWXDmFI41PQePGGl8WIvX4OvJ6YGNjY2NjY2NjY9+S/Yiv5//64zHBPfn9P78drhkbGxt7a/ZsQa8e8Oq/npeefL7qpWNjY2OfwH41APKltEtsh9ZszdjY2NjY+SPzl7IytLCxsbGxr2Jftejk1aysGRsbG/sc9iyaTwbV73d+QJaGjY2NfXt2Xpre5/O/9tvY2NjYN2a3VzKiZktsa+N65djY2Nibsmdx/2zwtLFUvo35fZ3Y2NjYp7GTaL6tAWblbv6ykt/BxsbGPoe9sqAkkJrVxivHg7CxsbFPYOfHZZIx1o7AFpB/i42NjX0COy8DkrGU35M8JRmrbyl6sbGxsT+QnW8S2u3K7M48Wlrqt7GxsbE3ZefjJ381ecTfDtHiWdjY2Nhbs1dG2spomUVXs0gLGxsbe1d2/hNJfL8S969XxUWohI2Njb0Re1a+5luRhJrET/k25uXfsbGxsQ9g59uSWdiUb0jaYjhaLTY2Nvam7Ly4bY9mJmOmrRxW4ipsbGzsXdnJcmdh0/omJ3k1+YYHGxsbe2/2DNkWBrMwqA2ShqESNjY29oez85h+VvTmG5vkN9syGBsbG3tv9ix8bwva2a/lhXQUM2FjY2Nvzc7HQx7ltId12hFVj1tsbGzsY9htjZqXCu0wa0ddUQ9gY2Njb8fOo6X2COZVLygPkoahEjY2NvYW7JVSNt8SFAtdfgo2Njb2aex28LTHdNpBOLuwsbGxT2O31/vCoPZ36hICGxsbe1P2ymCYxUztZqP9XIRK2NjY2Bux21o3H0KzsZSPqCIIw8bGxj6A3R52TL5dL5VndS82NjY2ds7OS4L1GqBdDzY2NjZ2shVZOUbTFhLtCMTGxsY+jT0ra68qaGcvtDi4iY2Njb01exbcFNuAOMRvkXk5jY2Njb0r+5wLGxsbGxsbGxsb+zbXN9YbIIIQLkEHAAAAAElFTkSuQmCC">
     
 </ul>
 
@@ -447,9 +447,9 @@ zh"
     </button>
     <!-- <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/regexp/">regexp</a>
+        <a class="post_tag-link" href="/tags/编码规范/">编码规范</a>
     </ul> -->
-    <a class="post_tag-link" href="/tags/regexp/">regexp</a>
+    <a class="post_tag-link" href="/tags/编码规范/">编码规范</a>
     
 
     <!-- Share -->
@@ -465,7 +465,7 @@ zh"
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=正则表达式&url=https://627235655.github.io/2018/07/05/regular-expression/index.html&pic=https://627235655.github.io/img/random/material-8.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=前端编码规范&url=https://627235655.github.io/2018/11/15/front-end-code-standards/index.html&pic=https://627235655.github.io/img/random/material-8.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -474,7 +474,7 @@ zh"
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=正则表达式&url=https://627235655.github.io/2018/07/05/regular-expression/index.html&via=zongyuan" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=前端编码规范&url=https://627235655.github.io/2018/11/15/front-end-code-standards/index.html&via=zongyuan" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -483,7 +483,7 @@ zh"
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://627235655.github.io/2018/07/05/regular-expression/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://627235655.github.io/2018/11/15/front-end-code-standards/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -492,7 +492,7 @@ zh"
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=https://627235655.github.io/2018/07/05/regular-expression/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://627235655.github.io/2018/11/15/front-end-code-standards/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -518,60 +518,144 @@ zh"
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <blockquote>
-<p>总是记不住的正则,再过一遍</p>
+<p>代码写的不知所云，就很难受了</p>
 </blockquote>
-<h4 id="能干嘛"><a href="#能干嘛" class="headerlink" title="能干嘛"></a>能干嘛</h4><ul>
-<li>数据验证。</li>
-<li>复杂的字符串搜寻、替换。</li>
-<li>基于模式匹配从字符串中提取子字符串。</li>
+<h4 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h4><ul>
+<li>常量名用全大写，下划线划分词义</li>
+<li>变量名用全小写，下划线划分词义，或者驼峰式</li>
+<li>函数名用驼峰式，</li>
+<li>类名驼峰式，首字母大写</li>
 </ul>
-<h4 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h4><pre><code>var regex = new RegExp(&apos;xyz&apos;, &apos;i&apos;);  
-var regex = new RegExp(/xyz/i); 
-var regex = /xyz/i; 
-// ES6的写法。ES5在第一个参数是正则时，不允许此时使用第二个参数，会报错。 
-// 返回的正则表达式会忽略原有的正则表达式的修饰符，只使用新指定的修饰符。
-// 下面代码返回”i”。
-new RegExp(/abc/ig, &apos;i&apos;).flags
-</code></pre><h4 id="用法及API"><a href="#用法及API" class="headerlink" title="用法及API"></a>用法及API</h4><h5 id="String的匹配方法"><a href="#String的匹配方法" class="headerlink" title="String的匹配方法"></a>String的匹配方法</h5><p><code>String.search(string|reg)</code><br>参数： <code>string|reg</code><br>返回： 第一个与参数匹配的子串的起始位置，如果找不到，返回-1。<br>说明：不支持全局搜索</p>
-<pre><code>&apos;aabbcc&apos;.search(&apos;ab&apos;) // 1
-&apos;aabbcc&apos;.search(/ab/) // 1
-&apos;aabbcc&apos;.search(/abc/) // -1
-</code></pre><p><code>String.replace()</code><br>作用：查找并替换字符串。<br>第一个参数：<code>string|reg</code>，<br>第二个参数：要进行替换的字符串，也可以是函数。<br>用法：</p>
-<pre><code>$1、$2、...、$99 与 regexp 中的第 1 到第 99 个子表达式相匹配的文本。
-$&amp;  与 regexp 相匹配的子串。
-$`  位于匹配子串左侧的文本。
-$&apos;  位于匹配子串右侧的文本。
-$$  普通字符$。
-eg:
-&apos;abc&apos;.replace(/b/g, &quot;{$$$`$&amp;$&apos;}&quot;)
-// 结果为 &quot;a{$abc}c&quot;，即把b换成了{$abc}
-</code></pre><p><code>String.match()</code><br>参数：<code>string|reg</code><br>返回：一个由匹配结果组成的数组。</p>
-<pre><code>&apos;abcabc&apos;.match(/ab/) // [&quot;ab&quot;, index: 0, input: &quot;abcabc&quot;, groups: undefined]
-&apos;abcabc&apos;.match(/ab/g) // [&quot;ab&quot;, &quot;ab&quot;]
-&apos;abcabc&apos;.match(/abb/g) // null
-</code></pre><p><code>String.split()</code><br>作用：把一个字符串分割成字符串数组。<br>参数：<code>string|reg</code><br>返回：子串组成的数组。</p>
-<pre><code>&apos;abcabc&apos;.split(&apos;b&apos;) // [&quot;a&quot;, &quot;ca&quot;, &quot;c&quot;]
-&apos;abcabc&apos;.split(/b/) // [&quot;a&quot;, &quot;ca&quot;, &quot;c&quot;]
-&apos;abcabc&apos;.split(/b/g) // [&quot;a&quot;, &quot;ca&quot;, &quot;c&quot;]
-</code></pre><h5 id="RegExp的方法"><a href="#RegExp的方法" class="headerlink" title="RegExp的方法"></a>RegExp的方法</h5><p><code>reg.exec()</code><br>参数：<code>str</code><br>返回：</p>
+<pre><code>// good
+const USER_NAME = &apos;陈平安&apos;;
+let   user_name = &apos;陈平安&apos;;
+let   userName = &apos;陈平安&apos;;
+let   getUserName = () =&gt; {};
+class UerName {};
+</code></pre><p>注意，不要滥用变量，即数据只使用一次或不使用就无需装到变量中。</p>
+<h4 id="命名的含义"><a href="#命名的含义" class="headerlink" title="命名的含义"></a>命名的含义</h4><ul>
+<li>不要使用无含义的命名</li>
+</ul>
+<pre><code>// bad
+if (val &gt; 8) {} // 这里的8代表什么？？ 无含义
+// good
+const USER_AGE = 8;
+if (val &gt; USER_AGE) {} // 含义明确
+</code></pre><ul>
+<li><p>使用说明性的命名</p>
 <ul>
-<li>非全局检索：与String.macth()非全局检索相同，返回一个数组或null。</li>
-<li>全局检索：尽管是全局匹配的正则表达式，但是exec方法只对指定的字符串进行一次匹配。但是可以反复调用来实现全局检索。在 RegExpObject 的lastIndex 属性指定的字符处开始检索字符串；匹配后，将更新lastIndex为匹配文本的最后一个字符的下一个位置；再也找不到匹配的文本时，将返回null，并把 lastIndex 属性重置为 0。</li>
+<li>对于返回或者值为 true or false 的函数、变量，最好以 should/is/can/has 开头</li>
+<li>动作函数要以动词开头，常用词组 get/set/add/remove/crate/destory<a href="https://www.cnblogs.com/qianduanjingying/p/6136651.html" target="_blank" rel="noopener">了解更多</a></li>
+<li>功能函数最好为纯函数</li>
 </ul>
-<p></p>
+</li>
+</ul>
+<pre><code>is_man = true;
+hasGrilFriend() {};
+getUserName() {};
+add = (a, b) =&gt; a+b;
+</code></pre><h4 id="函数传参"><a href="#函数传参" class="headerlink" title="函数传参"></a>函数传参</h4><ul>
+<li>传参无说明</li>
+</ul>
+<pre><code>// bad
+initUser(&apos;陈平安&apos;, true, false); // ?? 参数什么意思
+// good
+initUser({
+    user_name: &apos;陈平安&apos;,
+    is_man: true,
+    use_sword: fasle,
+});
+</code></pre><h4 id="if-else-过多"><a href="#if-else-过多" class="headerlink" title="if else 过多"></a>if else 过多</h4><pre><code>// bad
+if (a === 1) {}
+else if (a ===2) {}
+else {}
 
-<pre><code>let reg = /ab/g
-let str = &apos;abcabc&apos;
-reg.exec(str) // [&quot;ab&quot;, index: 0, input: &quot;abcabc&quot;, groups: undefined]
-reg.exec(str) // [&quot;ab&quot;, index: 3, input: &quot;abcabc&quot;, groups: undefined]
-reg.exec(str) // null
-reg.lastIndex // 0
-</code></pre><p><code>reg.test()</code><br>参数：字符串。<br>返回：true或false。</p>
-<pre><code>reg.test(&apos;aaa&apos;) // false
-reg.test(&apos;abc&apos;) // true
-</code></pre><p><code>reg.toString()</code><br>返回：字符串</p>
-<pre><code>reg.toString() // &quot;/ab/g&quot;
-</code></pre>
+// good
+switch(a) {
+   case 1:
+   case 2:
+  default:
+}
+// 或者
+let handler = {
+    1: () =&gt; {},
+    2: () =&gt; {}.
+    default: () =&gt; {}
+}
+handler[a]() || handler[&apos;default&apos;]()
+</code></pre><h4 id="使用解构赋值"><a href="#使用解构赋值" class="headerlink" title="使用解构赋值"></a>使用解构赋值</h4><pre><code>var data = { name: &apos;陈平安&apos;, age: 18 };
+// bad
+function getUser(data) {
+    var name = data.name;
+    var age = data.age;
+    console.log(`name is ${name}, age is ${age}`)
+}
+
+// good
+let getUser = ({name, age}) =&gt; {
+    console.log(`name is ${name}, age is ${age}`)
+}
+getUser(data)
+// 数组的解构也是相同的
+</code></pre><h4 id="CSS-的-BEM-命名"><a href="#CSS-的-BEM-命名" class="headerlink" title="CSS 的 BEM 命名"></a>CSS 的 BEM 命名</h4><ul>
+<li>B：块（Block）</li>
+<li>E：元素（Element）</li>
+<li>M：修饰符（Modifier）</li>
+</ul>
+<pre><code>.header{} /* 块 */
+.header_nav{} /* 元素 */
+.header-nav--active{} /* 修饰符 */
+//之所以使用两个连字符和下划线而不是一个，是为了让你自己的块可以用单个连字符来界定
+.header_nav_item--active{} // ?? 是这个意思吗
+</code></pre><h4 id="CSS-面向对象的命名-OOCSS"><a href="#CSS-面向对象的命名-OOCSS" class="headerlink" title="CSS 面向对象的命名 OOCSS"></a>CSS 面向对象的命名 OOCSS</h4><ul>
+<li>把一些公用样式给抽象出来，类似 java 里的最基础的类，一个元素继承多个类名来达成最终的样式</li>
+<li>通过对基础对象扩展类名，从而达到基础对象的可重用性</li>
+</ul>
+<pre><code>// 比如 页面很多地方都有的样式是 有一个盒阴影 有外边距
+.shadow{}
+.margin{}
+
+&lt;header class=&quot;header shadow&quot;&gt;&lt;/header&gt;
+&lt;footer class=&quot;footer shadow margin&quot;&gt;&lt;/footer&gt;
+</code></pre><h4 id="CSS-基于属性的命名-Atomic-CSS"><a href="#CSS-基于属性的命名-Atomic-CSS" class="headerlink" title="CSS 基于属性的命名 Atomic CSS"></a>CSS 基于属性的命名 Atomic CSS</h4><ul>
+<li>把基于 css 属性的样式给抽象出来</li>
+</ul>
+<pre><code>// 比如 页面很多地方都有的样式是 白色背景 圆角
+.bg-white{
+    background: &apos;#fff&apos;;
+}
+.b-r{
+    border-radius: 5px;
+}
+
+&lt;header class=&quot;header bg-white b-r&quot;&gt;&lt;/header&gt;
+&lt;footer class=&quot;footer bg-white b-r&quot;&gt;&lt;/footer&gt;
+</code></pre><h4 id="CSS-的属性书写顺序"><a href="#CSS-的属性书写顺序" class="headerlink" title="CSS 的属性书写顺序"></a>CSS 的属性书写顺序</h4><ul>
+<li>个人的顺序如下，大致就是由外而内<a href="https://blog.csdn.net/dora_310/article/details/71437933" target="_blank" rel="noopener">了解更多</a></li>
+</ul>
+<pre><code>.class-name{
+    content // 伪元素，方便第一时间鉴定
+    position
+    top/right/bottom/left
+    z-index
+    display
+    float // 定位属性
+    width/height/max-width/max-height/min-width/min-height
+    margin/padding
+    border相关
+    background相关
+    box-shadow
+    overflow/clear // 盒样式-自身属性
+    font-family/font-size/font-style/font-weight/font-varient/color  // 文字样式
+    text-align/vertical-align/text-wrap/text-transform/text-indent/text-decoration/letter-spacing/word-spacing/white-space/text-overflow // 文本属性
+    transform/transiton/animation // css3属性
+}
+</code></pre><h4 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h4><ul>
+<li>注意语义化</li>
+<li>注意标签闭合</li>
+<li>注意键盘访问性</li>
+</ul>
+
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
                     <p><strong>
@@ -579,7 +663,7 @@ reg.test(&apos;abc&apos;) // true
                             感谢阅读 thx~
                         </strong>
                         <br>
-                        <strong>本文链接：</strong><a href="https://627235655.github.io/2018/07/05/regular-expression/">https://627235655.github.io/2018/07/05/regular-expression/</a>
+                        <strong>本文链接：</strong><a href="https://627235655.github.io/2018/11/15/front-end-code-standards/">https://627235655.github.io/2018/11/15/front-end-code-standards/</a>
                     </p>
                 </blockquote>
         
@@ -623,21 +707,13 @@ reg.test(&apos;abc&apos;) // true
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/07/05/svg-and-canvas/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            上一篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2018/06/21/accessibility-web/" id="post_nav-older" class="next-content">
+        <a href="/2018/11/15/call-apply-bind/" id="post_nav-older" class="next-content">
             下一篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
@@ -831,7 +907,7 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 <div id="music163player" style="margin-top: 50px;">
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=730810&auto=1&height=66"></iframe>
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=29087154&auto=1&height=66"></iframe>
 </div>
 
 <!-- Sidebar Divider -->
